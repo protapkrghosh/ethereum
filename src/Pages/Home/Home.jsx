@@ -1,8 +1,9 @@
+import Faq from "@/SectionComs/FAQ/Faq";
 
 const Home = () => {
   return (
     <div>
-      <h3 className="font-urbanist">Home page</h3>
+      <Faq />
     </div>
   );
 };
