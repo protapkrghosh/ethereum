@@ -1,8 +1,24 @@
+import Container from '../../SectionComs/Container/Container';
+import img from '../../assets/icons/Vector.png'
+import { GoDotFill } from "react-icons/go";
 
 const Footer = () => {
   return (
-    <div>
-      <h3>Footer</h3>
+    <div className='bg-[#11121F] border border-t-[#1e2037] py-5'>
+      <Container>
+        <div className='flex justify-between items-center'>
+          <div>
+            <img src={img} alt="Ethereum Logo" className='w-[116px] h-auto'/>
+          </div>
+
+          <div className='flex items-center text-[#676a8f] font-urbanist gap-x-3 relative'>
+            <a href='#' className='hover:underline'>Terms of use</a>
+            <GoDotFill className='text-[11px]'/>
+            <a href='#' className='hover:underline'>Privacy notice</a>
+            <span className='text-white text-[15px] bg-[#17182a] px-2 py-[1px] border border-[#1e2037] rounded-md'>V0 29 0</span>
+          </div>
+        </div>
+      </Container>
     </div>
   );
 };
