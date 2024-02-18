@@ -6,7 +6,7 @@ const Faq = () => {
       <h2 className="text-[18px] text-white font-medium uppercase mb-3">FAQ</h2>
 
       <div>
-        <Accordion type="single" defaultValue="item-1" collapsible className="w-full border border-[#1f213a] rounded-[18px]">
+        <Accordion type="single" defaultValue="item-1" collapsible className="w-full bg-[#131524] border border-[#1f213a] rounded-[18px]">
           <AccordionItem value="item-1" className="px-7 py-3 border-b border-b-[#1f213a]">
             <AccordionTrigger className="text-white text-[18px]">What is Ethereum Airdrop?</AccordionTrigger>
             <AccordionContent className="text-[#686b91] text-[18px] mt-4 leading-7">
