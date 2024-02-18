@@ -8,9 +8,9 @@ const Footer = () => {
     <div className='bg-[#11121F] border border-t-[#1e2037] py-5'>
       <Container>
         <div className='flex justify-between items-center'>
-          <div>
+          <Link to='/'>
             <img src={img} alt="Ethereum Logo" className='w-[116px] h-auto'/>
-          </div>
+          </Link>
 
           <div className='flex items-center text-[#676a8f] font-urbanist gap-x-3 relative'>
             <Link to='/' className='hover:underline'>Terms of use</Link>
