@@ -1,8 +1,11 @@
+import Faq from "@/SectionComs/FAQ/Faq";
+import LidoStatistics from "@/SectionComs/LidoStatistics/LidoStatistics";
 
 const Home = () => {
   return (
     <div>
-      <h3 className="font-urbanist">Home page</h3>
+      <LidoStatistics />
+      <Faq />
     </div>
   );
 };
