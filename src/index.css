@@ -4,7 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
- 
+body {
+  @apply font-urbanist
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
