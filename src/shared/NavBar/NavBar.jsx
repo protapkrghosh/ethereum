@@ -69,7 +69,7 @@ const NavBar = () => {
 
             <div onClick={() => setOpen(!open)} className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden">
               {
-                open ? <IoClose /> : <IoMenu />
+                open ? <IoClose className="text-[#404175]" /> : <IoMenu className="text-[#404175]"/>
               }
             </div>
 
