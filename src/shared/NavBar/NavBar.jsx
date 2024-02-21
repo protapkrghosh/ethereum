@@ -29,6 +29,7 @@ const NavBar = () => {
           <div className="md:flex justify-between items-center py-4 md:px-10 px-7">
             {/* Large device menu */}
             <div className="flex">
+              {/* Logo */}
               <Link className="md:mr-[20px] xl:mr-[90px] 2xl:mr-[120px]">
                 <img src={logo} alt="Logo" className="w-[141px]"/>
               </Link>
