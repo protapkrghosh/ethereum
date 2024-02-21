@@ -1,13 +1,14 @@
 import Container from "../Container/Container";
 import shadow1 from "@/assets/icons/Ellipse51.png"
 import shadow2 from "@/assets/icons/Ellipse6.png"
+import { Link } from "react-router-dom";
 
 const Rewords = () => {
   return (
-    <div className="bg-[#11121F] min-h-[450px] overflow-hidden">
+    <div className="bg-[#11121F] overflow-hidden">
       <Container>
-        <div className="relative">
-          <div>
+        <div className=" relative">
+          <div className="min-h-[410px]">
             <img src={shadow1} alt="Image" className="absolute ml-20" />
             <img src={shadow2} alt="Image" className="absolute ml-[400px]" />
           </div>
@@ -20,9 +21,13 @@ const Rewords = () => {
 
         {/* Card */}
         <div className="border-[#1f213a]">
-          <div>
+          {/* <div>
+            <div>
+              <p>10 ETH = $ 25.000.00</p>
 
-          </div>
+              <Link to="/" className='text-white text-[14px] bg-[#17182a] px-4 py-1 border border-[#22243f] rounded-md'>V0 29 0</Link>
+            </div>
+          </div> */}
         </div>
       </Container>
     </div>
