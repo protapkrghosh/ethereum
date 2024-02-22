@@ -9,14 +9,20 @@ const LidoStatistics = () => {
       </div>
 
       <div className="bg-[#131524] border border-[#1f213a] rounded-[18px]">
-        <div className="text-[18px] py-7 flex justify-between items-center px-6">
-          <p className="text-white capitalize">Total Rewords</p>
-          <p className="text-transparent bg-clip-text bg-gradient-to-t from-[#414453] from-10% to-[#b0b8da] to-90% font-semibold">9,510,644 B30 ETH</p>
+        <div className="py-7 flex justify-between items-center px-6">
+          <p className="text-[18px] text-white capitalize">Total Rewords</p>
+          <div className="text-[19px]">
+            <p className="text-transparent bg-clip-text bg-gradient-to-t from-[#414453] from-10% to-[#b0b8da] to-90% font-semibold">9,510,644 B30 ETH</p>
+          </div>
         </div>
-        <div className="bg-[#1f213a] h-[1px]"/>
-        <div className="text-[18px] py-7 flex justify-between items-center px-6">
-          <p className="text-white capitalize">Random Winners</p>
-          <p className="text-transparent bg-clip-text bg-gradient-to-t from-[#414453] from-10% to-[#b0b8da] to-90% font-semibold">353136</p>
+
+        <div className="bg-[#1f213a] h-[1px]" />
+        
+        <div className="py-7 flex justify-between items-center px-6">
+          <p className="text-[18px] text-white capitalize">Random Winners</p>
+          <div className="text-[19px]">
+            <p className="text-transparent bg-clip-text bg-gradient-to-t from-[#414453] from-10% to-[#b0b8da] to-90% font-semibold">353136</p>
+          </div>
         </div>
       </div>
     </div>
