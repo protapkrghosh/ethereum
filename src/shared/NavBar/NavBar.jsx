@@ -25,7 +25,7 @@ const NavBar = () => {
   return (
     <div>
       <Container>
-        <div className="w-full fixed top-0 py-3 border-b border-[#1d2030a8] left-0">
+        <div className="w-full fixed top-0 py-3 border-b border-[#1d2030a8] left-0 z-10">
           <div className="md:flex justify-between items-center py-4 md:px-10 px-7">
             {/* Large device menu */}
             <div className="flex">
