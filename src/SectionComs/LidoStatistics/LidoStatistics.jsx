@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const LidoStatistics = () => {
   return (
-    <div className="bg-[#11121F] px-[60px] md:px-[300px] xl:px-[380px] 2xl:px-[30%] pt-24 -mt-[2px]">
-      <div className="flex justify-between items-center text-[18px] mb-3">
+    <div className="bg-[#11121F] px-[30px] md:px-[300px] xl:px-[380px] 2xl:px-[30%] pt-[27rem] xl:pt-96 -mt-[2px]">
+      <div className="flex justify-between items-center text-[18px] mb-3 mt-2">
         <p className="text-white font-medium">Lido statistics</p>
         <Link to='/' className="text-[#686b91] hover:underline">View on Ethersean</Link>
       </div>
@@ -17,7 +17,7 @@ const LidoStatistics = () => {
         </div>
 
         <div className="bg-[#1f213a] h-[1px]" />
-        
+
         <div className="py-7 flex justify-between items-center px-6">
           <p className="text-[18px] text-white capitalize">Random Winners</p>
           <div className="text-[19px]">
