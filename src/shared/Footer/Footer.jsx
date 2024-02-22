@@ -5,7 +5,7 @@ import { GoDotFill } from "react-icons/go";
 
 const Footer = () => {
   return (
-    <div className='bg-[#11121F] border-t border-t-[#1e2037] py-5'>
+    <div className='bg-[#11121F] border-t border-t-[#1e2037] py-5 -mt-[2px]'>
       <Container>
         <div className='flex justify-between items-center'>
           <Link to='/'>
