@@ -8,6 +8,16 @@ body {
   @apply font-urbanist
 }
 
+.shadowOne {
+  background-image: url(../src/assets/icons/Ellipse51.png);
+  background-repeat: no-repeat;
+}
+
+.shadowTwo{
+  background-image: url(../src/assets/icons/Ellipse6.png);
+  background-repeat: no-repeat;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
