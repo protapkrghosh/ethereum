@@ -37,17 +37,17 @@ const NavBar = () => {
               <ul className={`md:flex md:items-center md:pb-0 pb-12 bg-[#242541] md:bg-transparent absolute md:static md:z-auto z-[-1px] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-linear opacity-0 md:opacity-100 space-y-4 md:space-y-0 border border-[#312956] rounded-[12px] ${open ? 'top-[78px] opacity-100' : 'top-[-490px]'}`}>
 
                 <li className="flex items-center uppercase bg-gradient-to-r from-[#6F5CE4] to-[#8868EE] py-[10px] rounded-[12px] px-[16px] 2xl:px-[20px]">
-                  <a href="/" className="text-[15px] text-[#fff] font-thin flex items-center">
+                  <Link to="/" className="text-[15px] text-[#fff] font-thin flex items-center">
                     <img src={icon1} alt="Icons" className="mr-2" />
                     Stake
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 2xl:px-5 duration-500">
-                  <a href="/" className="text-[15px] text-[#68699e] flex items-center">
+                  <Link to="/connect" className="text-[15px] text-[#68699e] flex items-center">
                     <img src={icon2} alt="Icons" className="mr-2" />
                     Myterybox
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 2xl:px-5">

@@ -10,7 +10,7 @@ const RewordCard = () => {
       <Container>
         {/* Card */}
         <div className='absolute top-[21.5rem] w-[23rem] xl:w-[36.7rem] 2xl:w-[40rem] -ml-4 md:-ml-0 2xl:-ml-7'>
-          <div className="border border-[#1f213a] bg-[#151727] rounded-[18px]">
+          <div className="border border-[#1f213a] bg-gradient-to-b from-[#151727] to-[#151727] rounded-[18px]">
             <div>
               <div className="px-6 pt-6">
                 <div className="flex justify-between items-center border border-[#1f213a] px-6 py-4 rounded-[18px] mb-6">
