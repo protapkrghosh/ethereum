@@ -13,19 +13,24 @@ import { IoMdSunny } from "react-icons/io";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
+  const [color, setColor] = useState(false);
   const [changeBg, setChangeBg] = useState(false);
 
-  const LinkNames = [
-    { name: "Stake", link: "/", icon: icon1 },
-    { name: "MyTerybox", link: "/", icon: icon2 },
-    { name: "Withdrawals", link: "/", icon: icon3 },
-    { name: "Rewards", link: "/", icon: icon4 },
-  ];
+  if (typeof window !== 'undefined') {
+    const changeColor = () => {
+      if (window?.scrollY >= 30) {
+        setColor(true);
+      } else {
+        setColor(false);
+      }
+    };
+    window.addEventListener('scroll', changeColor);
+  }
 
   return (
-    <div>
+    <div className={color ? 'sticky top-0 z-50 duration-300 bg-[#11121F] bg-opacity-75 text-[#d1d1d1] shadow-md' : 'pt-0 duration-300 bg-[#11121f]'}>
       <Container>
-        <div className="w-full fixed top-0 py-3 border-b border-[#1d2030a8] left-0 z-10">
+        <div className="w-full top-0 py-3 border-b border-[#1d2030a8] left-0 z-10">
           <div className="md:flex justify-between items-center py-4 md:px-10 px-7">
             {/* Large device menu */}
             <div className="flex">
@@ -106,6 +111,7 @@ const NavBar = () => {
                   </a>
                 </li>
 
+                {/* Change background color */}
                 <div className="flex items-center">
                   <Button className="text-[17px] font-light px-6">Connect wallet</Button>
                   <Button onClick={() => setChangeBg(!changeBg)} className="ml-3 p-4">
