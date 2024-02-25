@@ -52,6 +52,8 @@ import { Textarea } from "@/components/ui/textarea"
 
 
 const Connect = () => {
+
+
   return (
     <div className='bg-[#11121F] overflow-hidden'>
       <Container>
@@ -70,6 +72,8 @@ const Connect = () => {
                 <div className="mb-[32px]">
                   <form>
                     <Textarea type="textarea" className="h-[154px] border border-[#1f213a] text-[#fff] rounded-[18px] bg-transparent" />
+
+                    {/* <input type="submit" value="Connect wallet" className=' flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] px-3.5 py-4 border border-[#473e8b] rounded-[12px] w-full mt-[32px] cursor-pointer' /> */}
                   </form>
                 </div>
                 <div className="w-[100%] mb-[32px]">
