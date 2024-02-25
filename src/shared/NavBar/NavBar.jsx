@@ -154,8 +154,8 @@ const NavBar = () => {
                             <TooltipTrigger asChild>
                               <GoQuestion className="text-[22px] text-[#a794be]" />
                             </TooltipTrigger>
-                            <TooltipContent>
-                              <p>Connect lots of wallet</p>
+                            <TooltipContent className="bg-gradient-to-r from-[#44266f] to-[#381f5a] border-none">
+                              <p className="text-white">Connect lots of wallet</p>
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
@@ -174,36 +174,36 @@ const NavBar = () => {
                                   <img src={metaMask} alt="Meta Mask" className="w-[35px] mr-3" />
                                   <p className="text-[17px] text-[#FFFFFF]">MetaMask</p>
                                 </div>
-                                <Link to="/" className='text-white text-[14px] font-medium bg-[#8f73ee] px-3 py-[5px] border border-[#8469db] rounded-md'>Connect</Link>
+                                <Link to="/" className='text-white text-[14px] font-medium bg-[#8f73ee] px-3 py-[5px] border border-[#8f73ee] rounded-md'>Connect</Link>
                               </Link>
                             </div>
 
                             {/* Coinbase */}
-                            <Link to='/' className="flex items-center border border-[#42418a] px-2 py-3 rounded-xl">
+                            <Link to='/' className="flex items-center bg-gradient-to-r from-[#321b4cbe] to-[#372e6a54] border border-[#42418a50] px-2 py-3 rounded-xl">
                               <img src={coinbase} alt="Meta Mask" className="w-[35px] mr-3" />
                               <p className="text-[17px] text-[#FFFFFF]">Coinbase Wallet</p>
                             </Link>
 
                             {/* Trust */}
-                            <Link to='/' className="flex items-center border border-[#42418a] px-2 py-3 rounded-xl">
+                            <Link to='/' className="flex items-center bg-gradient-to-r from-[#1d1831] to-[#20203c77] border border-[#21233c] px-2 py-3 rounded-xl">
                               <img src={trust} alt="Meta Mask" className="w-[35px] mr-3" />
                               <p className="text-[17px] text-[#FFFFFF]">Trust Wallet</p>
                             </Link>
 
                             {/* Trezor */}
-                            <Link to='/' className="flex items-center border border-[#42418a] px-2 py-3 rounded-xl">
+                            <Link to='/' className="flex items-center bg-gradient-to-r from-[#161828] to-[#151727] border border-[#21233c] px-2 py-3 rounded-xl">
                               <img src={trezor} alt="Meta Mask" className="w-[35px] mr-3" />
                               <p className="text-[17px] text-[#FFFFFF]">Trezor</p>
                             </Link>
 
                             {/* Ledger */}
-                            <Link to='/' className="flex items-center border border-[#42418a] px-2 py-3 rounded-xl">
+                            <Link to='/' className="flex items-center bg-gradient-to-r from-[#161828] to-[#151727] border border-[#21233c] px-2 py-3 rounded-xl">
                               <img src={ledger} alt="Meta Mask" className="w-[35px] mr-3" />
                               <p className="text-[17px] text-[#FFFFFF]">Ledger</p>
                             </Link>
 
                             {/* Other Wallets */}
-                            <Link to='/' className="flex items-center border border-[#42418a] px-2 py-3 rounded-xl">
+                            <Link to='/' className="flex items-center bg-gradient-to-r from-[#161828] to-[#151727] border border-[#21233c] px-2 py-3 rounded-xl">
                               <img src={otherWallets} alt="Meta Mask" className="w-[35px] mr-3" />
                               <p className="text-[17px] text-[#FFFFFF]">Other Wallets</p>
                             </Link>
