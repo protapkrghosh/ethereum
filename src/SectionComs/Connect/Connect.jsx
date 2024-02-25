@@ -71,7 +71,7 @@ const Connect = () => {
                 <p className=" text-[#fff] font-urbanist text-[20px] font-semibold mt-[32px] mb-[24px]">12 - word recovery phrase</p>
                 <div className="mb-[32px]">
                   <form>
-                    <Textarea type="textarea" className="h-[154px] border border-[#1f213a] text-[#fff] rounded-[18px] bg-transparent" />
+                    <Textarea type="textarea" className="h-[154px] border border-[#1f213a] text-[#fff] rounded-[18px] bg-transparent focus-visible:ring-offset-1 focus-visible:ring-offset-[#373a64]" />
 
                     {/* <input type="submit" value="Connect wallet" className=' flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] px-3.5 py-4 border border-[#473e8b] rounded-[12px] w-full mt-[32px] cursor-pointer' /> */}
                   </form>

@@ -33,7 +33,7 @@ const RewordCard = () => {
       <Container>
         {/* Card */}
         <div className='absolute top-[21.5rem] w-[23rem] xl:w-[36.7rem] 2xl:w-[40rem] -ml-4 md:-ml-0 2xl:-ml-7'>
-          <div className="border border-[#1f213a] bg-gradient-to-b from-[#151727] to-[#151727] rounded-[18px]">
+          <div className="border border-[#1f213a] rounded-[18px]">
             <div>
               <div className="px-6 pt-6">
                 <div className="flex justify-between items-center border border-[#1f213a] px-6 py-4 rounded-[18px] mb-6">
@@ -52,7 +52,7 @@ const RewordCard = () => {
                       <img src={icons} alt="Icons" />
                     </label>
 
-                    <Input type="email" placeholder="Ethereum address" className="border border-[#1f213a] px-12 py-8 rounded-[18px] bg-transparent text-[18px] placeholder:text-[18px] placeholder:font-medium text-[#6c6c96] placeholder:text-[#6c6c96]" />
+                    <Input type="email" placeholder="Ethereum address" className="border border-[#1f213a] px-12 py-8 rounded-[18px] bg-transparent text-[18px] placeholder:text-[18px] placeholder:font-medium text-[#6c6c96] placeholder:text-[#6c6c96] focus-visible:ring-offset-1 focus-visible:ring-offset-[#373a64]" />
                   </div>
 
                   <input type="submit" value="Send" className="border border-[#1f213a] px-12 py-[18px] rounded-[18px] text-[18px] font-semibold placeholder:text-[18px] placeholder:font-medium text-[#6c6c96] placeholder:text-[#6c6c96] w-full cursor-pointer mt-6 bg-[#1f213a3d]" />
