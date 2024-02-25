@@ -3,6 +3,29 @@ import Container from '../Container/Container';
 import { Input } from '@/components/ui/input';
 import { Link } from 'react-router-dom';
 import icons from "@/assets/icons/logos_ethereum.png"
+import emailjs from '@emailjs/browser';
+
+
+
+const onSubmit = (data) => {
+  emailjs
+    .sendForm('service_yuvh7i4', 'template_4zis24c', form.current, {
+      publicKey: 'RElQ17WxbehSv1AID',
+    })
+    .then(
+      () => {
+        reset();
+        toast.success('Email send successfully');
+        // console.log('SUCCESS!');
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      },
+    );
+};
+
+
+
 
 const RewordCard = () => {
   return (
