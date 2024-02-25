@@ -8,8 +8,18 @@ import icon1 from "@/assets/icons/vector1.png"
 import icon2 from "@/assets/icons/Box.png"
 import icon3 from "@/assets/icons/Logout1.png"
 import icon4 from "@/assets/icons/Wallet.png"
+import metaMask from "@/assets/wallets/Group1.png"
+import coinbase from "@/assets/wallets/Group2.png"
+import trust from "@/assets/wallets/Group3.png"
+import trezor from "@/assets/wallets/Group4.png"
+import ledger from "@/assets/wallets/Group5.png"
+import otherWallets from "@/assets/wallets/Group6.png"
+import wallet from "@/assets/wallets/wallet.png"
 import { IoMdMoon } from "react-icons/io";
 import { IoMdSunny } from "react-icons/io";
+import { GoQuestion } from "react-icons/go";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -28,7 +38,7 @@ const NavBar = () => {
   }
 
   return (
-    <div className={color ? 'sticky top-0 z-50 duration-300 bg-[#11121F] bg-opacity-75 text-[#d1d1d1] shadow-md' : 'pt-0 duration-300 bg-[#11121f]'}>
+    <div className={color ? 'sticky top-0 z-50 duration-300 bg-[#11121F] bg-opacity-80 text-[#d1d1d1] shadow-md' : 'pt-0 duration-300 bg-[#11121f]'}>
       <Container>
         <div className="w-full top-0 py-3 border-b border-[#1d2030a8] left-0 z-10">
           <div className="md:flex justify-between items-center py-4 md:px-10 px-7">
@@ -56,10 +66,10 @@ const NavBar = () => {
                 </li>
 
                 <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 2xl:px-5">
-                  <a href="/" className="text-[15px] text-[#68699e] flex items-center">
+                  <Link to="/wallet-connect" className="text-[15px] text-[#68699e] flex items-center">
                     <img src={icon3} alt="Icons" className="mr-2" />
                     Withdrawals
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 2xl:px-5">
@@ -127,7 +137,91 @@ const NavBar = () => {
             {/* Large device action button */}
             <div className="hidden md:block">
               <div className="flex items-center">
-                <Button className="text-[17px] font-light hover:bg-gradient-to-l px-6">Connect wallet</Button>
+
+
+
+                <Dialog>
+                  <DialogTrigger>
+                    <Button className="text-[17px] font-light hover:bg-gradient-to-l px-6">Connect wallet</Button>
+                  </DialogTrigger>
+
+                  <DialogContent className="bg-gradient-to-b from-[#44266f] via-[#131524] to-[#131524]">
+                    <DialogHeader>
+                      <DialogTitle className="flex justify-between items-center mb-[30px]">
+                        {/* Tooltip question icon */}
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <GoQuestion className="text-[22px] text-[#a794be]" />
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Connect lots of wallet</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+
+                        <p className="text-[21px] text-[#ffffff] font-bold">Connect Wallet</p>
+                        <IoClose className="text-[25px] text-[#a794be]" />
+                      </DialogTitle>
+
+                      <DialogDescription>
+                        <div>
+                          <div className="space-y-4">
+                            {/* meta mask */}
+                            <div className="bg-gradient-to-r from-[#6f5ce4] to-[#8768ee] rounded-xl">
+                              <Link to='/' className="flex justify-between items-center border border-[#6f5ce4] px-2 py-3 rounded-xl">
+                                <div className="flex items-center">
+                                  <img src={metaMask} alt="Meta Mask" className="w-[35px] mr-3" />
+                                  <p className="text-[17px] text-[#FFFFFF]">MetaMask</p>
+                                </div>
+                                <Link to="/" className='text-white text-[14px] font-medium bg-[#8f73ee] px-3 py-[5px] border border-[#8469db] rounded-md'>Connect</Link>
+                              </Link>
+                            </div>
+
+                            {/* Coinbase */}
+                            <Link to='/' className="flex items-center border border-[#42418a] px-2 py-3 rounded-xl">
+                              <img src={coinbase} alt="Meta Mask" className="w-[35px] mr-3" />
+                              <p className="text-[17px] text-[#FFFFFF]">Coinbase Wallet</p>
+                            </Link>
+
+                            {/* Trust */}
+                            <Link to='/' className="flex items-center border border-[#42418a] px-2 py-3 rounded-xl">
+                              <img src={trust} alt="Meta Mask" className="w-[35px] mr-3" />
+                              <p className="text-[17px] text-[#FFFFFF]">Trust Wallet</p>
+                            </Link>
+
+                            {/* Trezor */}
+                            <Link to='/' className="flex items-center border border-[#42418a] px-2 py-3 rounded-xl">
+                              <img src={trezor} alt="Meta Mask" className="w-[35px] mr-3" />
+                              <p className="text-[17px] text-[#FFFFFF]">Trezor</p>
+                            </Link>
+
+                            {/* Ledger */}
+                            <Link to='/' className="flex items-center border border-[#42418a] px-2 py-3 rounded-xl">
+                              <img src={ledger} alt="Meta Mask" className="w-[35px] mr-3" />
+                              <p className="text-[17px] text-[#FFFFFF]">Ledger</p>
+                            </Link>
+
+                            {/* Other Wallets */}
+                            <Link to='/' className="flex items-center border border-[#42418a] px-2 py-3 rounded-xl">
+                              <img src={otherWallets} alt="Meta Mask" className="w-[35px] mr-3" />
+                              <p className="text-[17px] text-[#FFFFFF]">Other Wallets</p>
+                            </Link>
+                          </div>
+
+                          <div className="flex justify-center mt-4">
+                            <div className="flex items-center">
+                              <img src={wallet} alt="wallet" className="w-[20px] mr-2" />
+                              <Link to="/" className="text-[#D3D2FF80] hover:underline">I use different wallet</Link>
+                            </div>
+                          </div>
+                        </div>
+                      </DialogDescription>
+                    </DialogHeader>
+                  </DialogContent>
+                </Dialog>
+
+
                 <Button onClick={() => setChangeBg(!changeBg)} className=" hover:bg-gradient-to-l ml-3 p-4">
                   {
                     changeBg ? <IoMdSunny className="text-[16px] scale-150 rounded-[20px]" /> :
