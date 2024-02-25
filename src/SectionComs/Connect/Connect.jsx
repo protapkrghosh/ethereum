@@ -51,7 +51,7 @@ import BannerBg from "../Banner/BannerBg";
 
 const Connect = () => {
   return (
-    <div className='bg-[#11121F] h-screen'>
+    <div className='bg-[#11121F]'>
       <Container>
         <BannerBg />
 
@@ -63,7 +63,7 @@ const Connect = () => {
 
 
           {/* card section imput */}
-          <div className="bg-[#11121F] mt-[48px] px-[60px] md:px-[300px] xl:px-[348px] 2xl:px-[30%]">
+          <div className="bg-[#11121F] mt-[48px] px-[60px] md:px-[300px] xl:px-[348px] 2xl:px-[30%] pb-60">
             <div className="border border-[#1f213a] bg-[#151727] p-6 rounded-[18px]">
               <div>
                 <p className=" text-[#fff] font-urbanist text-[20px] font-semibold mt-[32px] mb-[24px]">12 - word recovery phrase</p>
