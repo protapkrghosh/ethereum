@@ -152,7 +152,7 @@ const NavBar = () => {
                         <TooltipProvider>
                           <Tooltip>
                             <TooltipTrigger asChild>
-                              <GoQuestion className="text-[22px] text-[#a794be]" />
+                              <GoQuestion className="text-[22px] text-[#a794be] cursor-help" />
                             </TooltipTrigger>
                             <TooltipContent className="bg-gradient-to-r from-[#44266f] to-[#381f5a] border-none">
                               <p className="text-white">Connect lots of wallet</p>
