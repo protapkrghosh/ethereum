@@ -3,7 +3,7 @@ import { Accordion,  AccordionContent, AccordionItem, AccordionTrigger } from "@
 const Faq = () => {
   return (
     <div className="bg-[#11121F] px-[30px] pt-5 pb-10 -mt-[2px]">
-      <div className="w-[80%] md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto">
+      <div className="w-full md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto">
         <h2 className="text-[18px] text-white font-medium uppercase mb-3">FAQ</h2>
 
         <div>
