@@ -39,7 +39,7 @@ const RewordCard = () => {
     <div className="bg-[#11121F] mt-[-10px] pb-6 pt-1">
       <Container>
         {/* Card */}
-        <div className='bg-[#11121F] w-[80%] md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto mt-[48px] pb-60"'>
+        <div className='bg-[#11121F] w-[76%] md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto mt-[48px] pb-60"'>
           <div className="border border-[#1f213a] rounded-[18px]">
             <div>
               <div className="px-6 pt-6">
