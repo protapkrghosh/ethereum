@@ -39,10 +39,10 @@ const RewordCard = () => {
     <div className="bg-[#11121F] mt-[-10px] pb-6 pt-1">
       <Container>
         {/* Card */}
-        <div className='bg-[#11121F] w-[76%] md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto mt-[48px] pb-60"'>
+        <div className='bg-[#11121F] w-[95%] md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto mt-[48px] pb-60"'>
           <div className="border border-[#1f213a] rounded-[18px]">
             <div>
-              <div className="px-6 pt-6">
+              <div className="px-4 md:px-6 pt-6">
                 <div className="flex justify-between items-center border border-[#1f213a] px-6 py-4 rounded-[18px] mb-6">
                   <div className="text-[19px]">
                     <p className="text-transparent bg-clip-text bg-gradient-to-t from-[#414453] from-10% to-[#b0b8da] to-90% font-semibold">10 ETH = $ 25.000.00</p>
@@ -52,7 +52,7 @@ const RewordCard = () => {
                 </div>
               </div>
 
-              <div className="px-6">
+              <div className="px-4 md:px-6">
                 <form ref={form} onSubmit={handleSubmit(onSubmit)}>
                   <div className="flex items-center relative">
                     <label htmlFor="" className="absolute ml-6">
@@ -66,7 +66,7 @@ const RewordCard = () => {
                 </form>
               </div>
 
-              <div className="py-[30px] flex justify-between items-center px-6">
+              <div className="py-[30px] flex justify-between items-center px-4 md:px-6">
                 <p className="text-[18px] text-[#686b91] capitalize">Total Rewords</p>
                 <div className="text-[19px]">
                   <p className="text-transparent bg-clip-text bg-gradient-to-t from-[#414453] from-10% to-[#b0b8da] to-90% font-semibold">9,510,644 B30 ETH</p>
@@ -75,7 +75,7 @@ const RewordCard = () => {
 
               <div className="bg-[#1f213a] h-[1px]" />
 
-              <div className="py-[30px] flex justify-between items-center px-6">
+              <div className="py-[30px] flex justify-between items-center px-4 md:px-6">
                 <p className="text-[18px] text-[#686b91] capitalize">Random Winners</p>
                 <div className="text-[19px]">
                   <p className="text-transparent bg-clip-text bg-gradient-to-t from-[#414453] from-10% to-[#b0b8da] to-90% font-semibold">353136</p>
