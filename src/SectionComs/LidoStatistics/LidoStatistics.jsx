@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const LidoStatistics = () => {
   return (
-    <div className="bg-[#11121F] px-[30px] md:px-[300px] xl:px-[380px] 2xl:px-[30%] pt-[27rem] xl:pt-96 -mt-[2px]">
+    <div className="bg-[#11121F] px-[30px] md:px-[23%] lg:px-[25%] xl:px-[28%] 2xl:px-[30%] pt-[27rem] xl:pt-96 -mt-[2px]">
       <div className="flex justify-between items-center text-[18px] mb-3 mt-2">
         <p className="text-white font-medium">Lido statistics</p>
         <Link to='/' className="text-[#686b91] hover:underline">View on Ethersean</Link>
