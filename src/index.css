@@ -12,9 +12,6 @@ body {
   /* background-image: url(../src/assets/icons/Ellipse51.png);
   background-repeat: no-repeat; */
 
-
-  width: 435.622px;
-  height: 307.686px;
   transform: rotate(42.926deg);
   flex-shrink: 0;
   border-radius: 435.622px;
@@ -27,7 +24,6 @@ body {
 .shadowTwo {
   /* background-image: url(../src/assets/icons/Ellipse6.png);
   background-repeat: no-repeat; */
-
 
   width: 435.622px;
   height: 307.686px;
