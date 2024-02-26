@@ -77,7 +77,7 @@ const Connect = () => {
                   </form>
                 </div>
                 <div className="w-[100%] mb-[32px]">
-                  <Link to="/" className=' flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] px-3.5 py-4 border border-[#232541] rounded-[12px]'>Connect wallet</Link>
+                  <Link to="/" className=' flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] hover:bg-[#6e75d213] px-3.5 py-4 border border-[#252846ce] hover:border-[#31345e] rounded-[12px] duration-200'>Connect wallet</Link>
                 </div>
               </div>
             </div>
