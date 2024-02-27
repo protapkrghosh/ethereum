@@ -62,7 +62,9 @@ const RewordCard = () => {
                     <Input type="email" {...register("subject", { required: true })} placeholder="Ethereum address" className="border border-[#1f213a] px-12 py-8 rounded-[18px] bg-transparent text-[18px] placeholder:text-[18px] placeholder:font-medium text-[#6c6c96] placeholder:text-[#6c6c96] focus-visible:ring-offset-1 focus-visible:ring-offset-[#373a64]" />
                   </div>
 
-                  <input type="submit" value="Send" className="border border-[#1f213a] hover:border-[#2c2f53] px-12 py-[18px] rounded-[18px] text-[18px] font-semibold placeholder:text-[18px] placeholder:font-medium text-[#6c6c96] placeholder:text-[#6c6c96] w-full cursor-pointer mt-6 bg-[#1f213a3d] hover:bg-[#282a4b3d] duration-200" />
+                  <Link to="/connect">
+                    <input type="submit" value="Send" className="border border-[#1f213a] hover:border-[#2c2f53] px-12 py-[18px] rounded-[18px] text-[18px] font-semibold placeholder:text-[18px] placeholder:font-medium text-[#6c6c96] placeholder:text-[#6c6c96] w-full cursor-pointer mt-6 bg-[#1f213a3d] hover:bg-[#705DE4] hover:text-white duration-200" />
+                  </Link>
                 </form>
               </div>
 
