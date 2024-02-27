@@ -43,7 +43,7 @@
 
 
 
-import React from 'react';
+import React, { useState } from 'react';
 import Container from "../Container/Container";
 import { Link } from "react-router-dom";
 import { Input } from "@/components/ui/input"
@@ -66,7 +66,7 @@ import { IoClose } from 'react-icons/io5';
 
 
 const Connect = () => {
-
+  const [show, setShow] = useState(false);
 
   return (
     <div className='bg-[#11121F]'>
@@ -97,7 +97,7 @@ const Connect = () => {
 
                     <Dialog>
                       <DialogTrigger className="w-full">
-                        <button className='w-full flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] hover:bg-[#6e75d213] px-3.5 py-4 border border-[#252846ce] hover:border-[#31345e] hover:bg-[#705DE4] hover:text-white rounded-[12px] duration-300'>Connect wallet</button>
+                        <button onClick={() => setShow(!show)} className='w-full flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] hover:bg-[#6e75d213] px-3.5 py-4 border border-[#252846ce] hover:border-[#31345e] hover:bg-[#705DE4] hover:text-white rounded-[12px] duration-300'>Connect wallet</button>
                       </DialogTrigger>
 
                       <DialogContent className="bg-gradient-to-b from-[#44266f] via-[#131524] to-[#131524] lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
@@ -181,9 +181,11 @@ const Connect = () => {
               </div>
             </div>
 
-            <div className='flex justify-center'>
-              <p className='text-red-500 font-urbanist font-semibold -mt-52 uppercase'>Connect your correct wallet</p>
-            </div>
+            {
+              show ? <div className='flex justify-center'>
+                <p className='text-red-500 font-urbanist font-semibold -mt-52 uppercase'>Connect your correct wallet</p>
+              </div> : ''
+            }
           </div>
         </div>
 
