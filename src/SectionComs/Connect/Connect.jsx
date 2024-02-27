@@ -91,12 +91,13 @@ const Connect = () => {
                       {/* <input type="submit" value="Connect wallet" className=' flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] px-3.5 py-4 border border-[#473e8b] rounded-[12px] w-full mt-[32px] cursor-pointer' /> */}
                     </form>
                   </div>
-                  <div className="w-[100%] mb-[32px]">
+                  
+                  <div className="w-full mb-[32px]">
                     {/* <Link to="" className=' flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] hover:bg-[#6e75d213] px-3.5 py-4 border border-[#252846ce] hover:border-[#31345e] hover:bg-[#705DE4] hover:text-white rounded-[12px] duration-300'>Connect wallet</Link> */}
 
                     <Dialog>
-                      <DialogTrigger >
-                        <button className=' flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] hover:bg-[#6e75d213] px-3.5 py-4 border border-[#252846ce] hover:border-[#31345e] hover:bg-[#705DE4] hover:text-white rounded-[12px] duration-300'>Connect wallet</button>
+                      <DialogTrigger className="w-full">
+                        <button className='w-full flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] hover:bg-[#6e75d213] px-3.5 py-4 border border-[#252846ce] hover:border-[#31345e] hover:bg-[#705DE4] hover:text-white rounded-[12px] duration-300'>Connect wallet</button>
                       </DialogTrigger>
 
                       <DialogContent className="bg-gradient-to-b from-[#44266f] via-[#131524] to-[#131524]">
