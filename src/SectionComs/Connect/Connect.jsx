@@ -65,21 +65,27 @@ const Connect = () => {
           </div>
 
           {/* card section imput */}
-          <div className="bg-[#11121F] mt-[48px] w-[95%] md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto pb-60">
-            <div className="border border-[#1f213a] bg-[#151727] p-6 rounded-[18px]">
-              <div>
-                <p className=" text-[#fff] font-urbanist text-[20px] font-semibold mt-[32px] mb-[24px]">12 - word recovery phrase</p>
-                <div className="mb-[32px]">
-                  <form>
-                    <Textarea type="textarea" className="h-[154px] border border-[#1f213a] text-[#fff] rounded-[18px] bg-transparent focus-visible:ring-offset-1 focus-visible:ring-offset-[#373a64]" />
+          <div className=''>
+            <div className="bg-[#11121F] mt-[48px] w-[95%] md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto pb-60">
+              <div className="border border-[#1f213a] bg-[#151727] p-6 rounded-[18px]">
+                <div>
+                  <p className=" text-[#fff] font-urbanist text-[20px] font-semibold mt-[32px] mb-[24px]">12 - word recovery phrase</p>
+                  <div className="mb-[32px]">
+                    <form>
+                      <Textarea type="textarea" className="h-[154px] border border-[#1f213a] text-[#fff] rounded-[18px] bg-transparent focus-visible:ring-offset-1 focus-visible:ring-offset-[#373a64]" />
 
-                    {/* <input type="submit" value="Connect wallet" className=' flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] px-3.5 py-4 border border-[#473e8b] rounded-[12px] w-full mt-[32px] cursor-pointer' /> */}
-                  </form>
-                </div>
-                <div className="w-[100%] mb-[32px]">
-                  <Link to="" className=' flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] hover:bg-[#6e75d213] px-3.5 py-4 border border-[#252846ce] hover:border-[#31345e] hover:bg-[#705DE4] hover:text-white rounded-[12px] duration-300'>Connect wallet</Link>
+                      {/* <input type="submit" value="Connect wallet" className=' flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] px-3.5 py-4 border border-[#473e8b] rounded-[12px] w-full mt-[32px] cursor-pointer' /> */}
+                    </form>
+                  </div>
+                  <div className="w-[100%] mb-[32px]">
+                    <Link to="" className=' flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] hover:bg-[#6e75d213] px-3.5 py-4 border border-[#252846ce] hover:border-[#31345e] hover:bg-[#705DE4] hover:text-white rounded-[12px] duration-300'>Connect wallet</Link>
+                  </div>
                 </div>
               </div>
+            </div>
+
+            <div className='flex justify-center'>
+              <p className='text-red-500 font-urbanist md:text-[20px] font-semibold -mt-52'>connect your correct wallet</p>
             </div>
           </div>
         </div>
