@@ -91,7 +91,7 @@ const Connect = () => {
                       {/* <input type="submit" value="Connect wallet" className=' flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] px-3.5 py-4 border border-[#473e8b] rounded-[12px] w-full mt-[32px] cursor-pointer' /> */}
                     </form>
                   </div>
-                  
+
                   <div className="w-full mb-[32px]">
                     {/* <Link to="" className=' flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] hover:bg-[#6e75d213] px-3.5 py-4 border border-[#252846ce] hover:border-[#31345e] hover:bg-[#705DE4] hover:text-white rounded-[12px] duration-300'>Connect wallet</Link> */}
 
@@ -182,7 +182,7 @@ const Connect = () => {
             </div>
 
             <div className='flex justify-center'>
-              <p className='text-red-500 font-urbanist font-semibold -mt-52 uppercase'>Connect your correct wallet</p>
+              <p className='text-red-500 font-urbanist font-semibold -mt-52 capitalize'>Connect your correct wallet</p>
             </div>
           </div>
         </div>
