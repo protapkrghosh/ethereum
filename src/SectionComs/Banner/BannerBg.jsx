@@ -20,7 +20,7 @@ import React from 'react';
 const BannerBg = () => {
   return (
     <div className="bg-[#11121F] md:flex justify-center -my-[2px]">
-      <div className='shadowOne w-[360px] md:w-[435.622px] h-[260px] md:h-[307.686px]'>
+      <div className='shadowOne w-[360px] md:w-[435.622px] h-[225px] md:h-[307.686px]'>
       </div>
       <div className='md:shadowTwo'>
       </div>
