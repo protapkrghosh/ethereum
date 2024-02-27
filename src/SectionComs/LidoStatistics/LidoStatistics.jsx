@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const LidoStatistics = () => {
   return (
-    <div className="bg-[#11121F] px-[18px] -mt-[10px]">
+    <div className="bg-[#11121F] px-[18px] pb-1 -mt-[10px]">
       <div className="w-full md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto">
         <div className="flex justify-between items-center text-[18px] mb-3 mt-2">
           <p className="text-white font-medium">Lido statistics</p>
