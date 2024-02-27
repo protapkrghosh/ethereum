@@ -48,7 +48,7 @@ const RewordCard = () => {
                     <p className="text-transparent bg-clip-text bg-gradient-to-t from-[#414453] from-10% to-[#b0b8da] to-90% font-semibold">10 ETH = $ 25.000.00</p>
                   </div>
 
-                  <Link to="/" className='text-white text-[14px] font-medium bg-[#3b3474] px-3 md:px-4 py-[6px] border border-[#473e8b] rounded-md uppercase'>For Free</Link>
+                  <Link to="/" className='text-white text-[14px] font-medium bg-[#3b3474] hover:bg-[#705DE4] px-3 md:px-4 py-[6px] border border-[#473e8b] rounded-md uppercase duration-300'>For Free</Link>
                 </div>
               </div>
 
@@ -63,7 +63,7 @@ const RewordCard = () => {
                   </div>
 
                   <Link to="/connect">
-                    <input type="submit" value="Send" className="border border-[#1f213a] hover:border-[#2c2f53] px-12 py-[18px] rounded-[18px] text-[18px] font-semibold placeholder:text-[18px] placeholder:font-medium text-[#6c6c96] placeholder:text-[#6c6c96] w-full cursor-pointer mt-6 bg-[#1f213a3d] hover:bg-[#705DE4] hover:text-white duration-200" />
+                    <input type="submit" value="Send" className="border border-[#1f213a] hover:border-[#2c2f53] px-12 py-[18px] rounded-[18px] text-[18px] font-semibold placeholder:text-[18px] placeholder:font-medium text-[#6c6c96] placeholder:text-[#6c6c96] w-full cursor-pointer mt-6 bg-[#1f213a3d] hover:bg-[#705DE4] hover:text-white duration-300" />
                   </Link>
                 </form>
               </div>
