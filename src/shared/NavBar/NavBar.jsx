@@ -124,12 +124,12 @@ const NavBar = () => {
                 {/* Change background color */}
                 <div className="flex items-center">
                   <Button className="text-[17px] font-light px-6">Connect wallet</Button>
-                  {/* <Button onClick={() => setChangeBg(!changeBg)} className="ml-3 p-4">
+                  <Button onClick={() => setChangeBg(!changeBg)} className="ml-3 p-4">
                     {
                       changeBg ? <IoMdSunny className="text-[16px] scale-150 rounded-[20px]" /> :
                         <IoMdMoon className="text-[16px] scale-150 rounded-[20px]" />
                     }
-                  </Button> */}
+                  </Button>
                 </div>
               </ul>
             </div>
@@ -222,12 +222,12 @@ const NavBar = () => {
                 </Dialog>
 
 
-                {/* <Button onClick={() => setChangeBg(!changeBg)} className=" hover:bg-gradient-to-l ml-3 p-4">
+                <Button onClick={() => setChangeBg(!changeBg)} className=" hover:bg-gradient-to-l ml-3 p-4">
                   {
                     changeBg ? <IoMdSunny className="text-[16px] scale-150 rounded-[20px]" /> :
                       <IoMdMoon className="text-[16px] scale-150 rounded-[20px]" />
                   }
-                </Button> */}
+                </Button>
               </div>
             </div>
           </div>
