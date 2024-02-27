@@ -79,7 +79,7 @@ const Connect = () => {
           </div>
 
           {/* card section imput */}
-          <div className=''>
+          <div>
             <div className="bg-[#11121F] mt-[48px] w-[95%] md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto pb-60">
               <div className="border border-[#1f213a] bg-[#151727] p-6 rounded-[18px]">
                 <div>
@@ -100,7 +100,7 @@ const Connect = () => {
                         <button className='w-full flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] hover:bg-[#6e75d213] px-3.5 py-4 border border-[#252846ce] hover:border-[#31345e] hover:bg-[#705DE4] hover:text-white rounded-[12px] duration-300'>Connect wallet</button>
                       </DialogTrigger>
 
-                      <DialogContent className="bg-gradient-to-b from-[#44266f] via-[#131524] to-[#131524]">
+                      <DialogContent className="bg-gradient-to-b from-[#44266f] via-[#131524] to-[#131524] lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
                         <DialogHeader>
                           <DialogTitle className="flex justify-between items-center mb-[30px]">
                             {/* Tooltip question icon */}
