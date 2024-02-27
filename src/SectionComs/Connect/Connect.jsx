@@ -95,12 +95,12 @@ const Connect = () => {
                   <div className="w-full mb-[32px]">
                     {/* <Link to="" className=' flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] hover:bg-[#6e75d213] px-3.5 py-4 border border-[#252846ce] hover:border-[#31345e] hover:bg-[#705DE4] hover:text-white rounded-[12px] duration-300'>Connect wallet</Link> */}
 
-                    <Dialog>
+                    <Dialog className=" ">
                       <DialogTrigger className="w-full">
                         <button className='w-full flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] hover:bg-[#6e75d213] px-3.5 py-4 border border-[#252846ce] hover:border-[#31345e] hover:bg-[#705DE4] hover:text-white rounded-[12px] duration-300'>Connect wallet</button>
                       </DialogTrigger>
 
-                      <DialogContent className="bg-gradient-to-b from-[#44266f] via-[#131524] to-[#131524]">
+                      <DialogContent className="bg-gradient-to-b from-[#44266f] via-[#131524] to-[#131524] lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
                         <DialogHeader>
                           <DialogTitle className="flex justify-between items-center mb-[30px]">
                             {/* Tooltip question icon */}
