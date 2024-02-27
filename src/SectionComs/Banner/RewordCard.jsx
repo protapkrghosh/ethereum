@@ -39,7 +39,7 @@ const RewordCard = () => {
     <div className="bg-[#11121F] mt-[-10px] pb-6 pt-1">
       <Container>
         {/* Card */}
-        <div className='bg-[#11121F] w-[95%] md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto mt-[48px] pb-60"'>
+        <div className='bg-[#11121F] w-[100%] md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto mt-[48px] pb-60"'>
           <div className="border border-[#1f213a] rounded-[18px]">
             <div>
               <div className="px-4 md:px-6 pt-6">
@@ -48,7 +48,7 @@ const RewordCard = () => {
                     <p className="text-transparent bg-clip-text bg-gradient-to-t from-[#414453] from-10% to-[#b0b8da] to-90% font-semibold">10 ETH = $ 25.000.00</p>
                   </div>
 
-                  <Link to="/" className='text-white text-[14px] font-medium bg-[#3b3474] px-4 py-[6px] border border-[#473e8b] rounded-md uppercase'>For Free</Link>
+                  <Link to="/" className='text-white text-[14px] font-medium bg-[#3b3474] px-3 md:px-4 py-[6px] border border-[#473e8b] rounded-md uppercase'>For Free</Link>
                 </div>
               </div>
 
