@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className='bg-[#11121F] border-t border-t-[#1e2037] py-5 -mt-[2px]'>
       <Container>
-        <div className='flex justify-between items-center'>
+        <div className='md:flex justify-between items-center'>
           <Link to='/'>
             <img src={img} alt="Ethereum Logo" className='w-[116px] h-auto'/>
           </Link>
