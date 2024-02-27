@@ -1,15 +1,17 @@
 import { Link } from 'react-router-dom';
 import Container from '../../SectionComs/Container/Container';
-import img from '../../assets/footer/Vector.png'
+import img1 from '../../assets/icons/Vector.png'
+import img2 from '../../assets/icons/Vector_log.png'
 import { GoDotFill } from "react-icons/go";
 
 const Footer = () => {
   return (
     <div className='bg-[#11121F] border-t border-t-[#1e2037] py-5 -mt-[2px]'>
       <Container>
-        <div className='md:flex justify-between items-center'>
+        <div className='flex justify-between items-center'>
           <Link to='/'>
-            <img src={img} alt="Ethereum Logo" className='w-[30px] h-auto' />
+            <img src={img1} alt="Ethereum Logo" className='w-[116px] h-auto hidden md:block'/>
+            <img src={img2} alt="Ethereum Logo" className='w-[28px] h-auto block md:hidden'/>
           </Link>
 
           <div className='flex items-center text-[#676a8f] gap-x-3 relative'>
