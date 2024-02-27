@@ -58,25 +58,25 @@ const NavBar = () => {
                   </Link>
                 </li>
 
-                <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 2xl:px-5 duration-500">
-                  <Link to="/connect" className="text-[15px] text-[#68699e] flex items-center">
+                <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 2xl:px-5 duration-500" title="Coming soon">
+                  <Link to="" className="text-[15px] text-[#68699e] flex items-center">
                     <img src={icon2} alt="Icons" className="mr-2" />
                     Myterybox
                   </Link>
                 </li>
 
-                <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 2xl:px-5">
-                  <Link to="/wallet-connect" className="text-[15px] text-[#68699e] flex items-center">
+                <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 2xl:px-5" title="Coming soon">
+                  <Link to="" className="text-[15px] text-[#68699e] flex items-center">
                     <img src={icon3} alt="Icons" className="mr-2" />
                     Withdrawals
                   </Link>
                 </li>
 
-                <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 2xl:px-5">
-                  <a href="/" className="text-[15px] text-[#68699e] flex items-center">
+                <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 2xl:px-5" title="Coming soon">
+                  <Link to="" className="text-[15px] text-[#68699e] flex items-center">
                     <img src={icon4} alt="Icons" className="mr-2" />
                     Rewards
-                  </a>
+                  </Link>
                 </li>
 
               </ul>
@@ -93,32 +93,32 @@ const NavBar = () => {
             <div className="block md:hidden">
               <ul className={`md:flex md:items-center md:pb-0 pb-12 bg-[#242541] md:bg-transparent absolute md:static md:z-auto z-[-1px] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-linear opacity-0 md:opacity-100 space-y-4 md:space-y-0 border border-[#312956] rounded-[12px] ${open ? 'top-[75px] opacity-100' : 'top-[-490px]'}`}>
 
-                <li className="flex items-center uppercase bg-gradient-to-r from-[#6F5CE4] to-[#8868EE] py-[10px] rounded-[12px] px-4 mr-9 md:mr-0 mt-3 md:mt-0">
-                  <a href="/" className="text-[15px] text-[#fff] font-thin flex items-center">
+                <li className="flex items-center uppercase bg-gradient-to-r from-[#6F5CE4] to-[#8868EE] py-[10px] rounded-[12px] px-4 mr-9 md:mr-0 mt-3 md:mt-0" title="Coming soon">
+                  <Link to="/" className="text-[15px] text-[#fff] font-thin flex items-center">
                     <img src={icon1} alt="Icons" className="mr-2" />
                     Stake
-                  </a>
+                  </Link>
                 </li>
 
-                <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 duration-500">
-                  <a href="/" className="text-[15px] text-[#68699e] flex items-center">
+                <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 duration-500" title="Coming soon">
+                  <Link to="/" className="text-[15px] text-[#68699e] flex items-center">
                     <img src={icon2} alt="Icons" className="mr-2" />
                     Myterybox
-                  </a>
+                  </Link>
                 </li>
 
-                <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4">
-                  <a href="/" className="text-[15px] text-[#68699e] flex items-center">
+                <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4" title="Coming soon">
+                  <Link to="/" className="text-[15px] text-[#68699e] flex items-center">
                     <img src={icon3} alt="Icons" className="mr-2" />
                     Withdrawals
-                  </a>
+                  </Link>
                 </li>
 
-                <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4">
-                  <a href="/" className="text-[15px] text-[#68699e] flex items-center">
+                <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4" title="Coming soon">
+                  <Link to="/" className="text-[15px] text-[#68699e] flex items-center">
                     <img src={icon4} alt="Icons" className="mr-2" />
                     Rewards
-                  </a>
+                  </Link>
                 </li>
 
                 {/* Change background color */}
@@ -137,9 +137,6 @@ const NavBar = () => {
             {/* Large device action button */}
             <div className="hidden md:block">
               <div className="flex items-center">
-
-
-
                 <Dialog>
                   <DialogTrigger>
                     <Button className="text-[17px] font-light hover:bg-gradient-to-l px-6">Connect wallet</Button>
@@ -220,7 +217,6 @@ const NavBar = () => {
                     </DialogHeader>
                   </DialogContent>
                 </Dialog>
-
 
                 <Button onClick={() => setChangeBg(!changeBg)} className=" hover:bg-gradient-to-l ml-3 p-4">
                   {
