@@ -183,7 +183,7 @@ const Connect = () => {
 
             {
               show ? <div className='flex justify-center'>
-                <p className='text-red-500 font-urbanist font-semibold -mt-52 uppercase'>Connect your correct wallet</p>
+                <p className='text-red-500 font-urbanist font-semibold -mt-52 capitalize'>Connect your correct wallet</p>
               </div> : ''
             }
           </div>
