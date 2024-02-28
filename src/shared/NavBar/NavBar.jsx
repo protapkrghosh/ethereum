@@ -137,7 +137,7 @@ const NavBar = () => {
                   </Link>
                 </li>
 
-                {/* Change background color */}
+                {/* Small screen change background color */}
                 <div className="flex items-center">
                   <Dialog>
                     <DialogTrigger>

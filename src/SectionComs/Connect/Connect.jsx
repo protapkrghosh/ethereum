@@ -11,12 +11,9 @@ import trezor from "@/assets/wallets/Group4.png"
 import ledger from "@/assets/wallets/Group5.png"
 import otherWallets from "@/assets/wallets/Group6.png"
 import wallet from "@/assets/wallets/wallet.png"
-import { IoMdMoon } from "react-icons/io";
-import { IoMdSunny } from "react-icons/io";
 import { GoQuestion } from "react-icons/go";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { Button } from '@/components/ui/button';
 import { IoClose } from 'react-icons/io5';
 
 
