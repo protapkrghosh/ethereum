@@ -3,7 +3,7 @@ import logo from "@/assets/icons/Vector.png"
 import Container from "@/SectionComs/Container/Container";
 import { Button } from "@/components/ui/button";
 import { IoMenu, IoClose } from "react-icons/io5";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import icon1 from "@/assets/icons/vector1.png"
 import icon2 from "@/assets/icons/Box.png"
 import icon3 from "@/assets/icons/Logout1.png"
@@ -25,6 +25,7 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [color, setColor] = useState(false);
   const [changeBg, setChangeBg] = useState(false);
+  const [theme, setTheme] = useState("light");
 
   if (typeof window !== 'undefined') {
     const changeColor = () => {
@@ -37,8 +38,21 @@ const NavBar = () => {
     window.addEventListener('scroll', changeColor);
   }
 
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark" );
+  }
+
   return (
-    <div className={color ? 'sticky top-0 z-50 duration-300 bg-[#11121F] bg-opacity-90 text-[#d1d1d1] shadow-md' : 'pt-0 duration-300 bg-[#11121f]'}>
+    <div className={color ? 'sticky top-0 z-50 duration-300 bg-[#11121F] dark:bg-gray-800 bg-opacity-90 text-[#d1d1d1] shadow-md' : 'pt-0 duration-300 bg-[#11121f] dark:bg-gray-800'}>
       <Container>
         <div className="w-full top-0 py-3 border-b border-[#1d2030a8] left-0 z-10">
           <div className="md:flex justify-between items-center py-4">
@@ -298,10 +312,17 @@ const NavBar = () => {
                   </DialogContent>
                 </Dialog>
 
-                <Button onClick={() => setChangeBg(!changeBg)} className=" hover:bg-gradient-to-l ml-3 p-4">
+                {/* <Button onClick={() => setChangeBg(!changeBg)} className=" hover:bg-gradient-to-l ml-3 p-4">
                   {
                     changeBg ? <IoMdSunny className="text-[16px] scale-150 rounded-[20px]" /> :
                       <IoMdMoon className="text-[16px] scale-150 rounded-[20px]" />
+                  }
+                </Button> */}
+
+                <Button onClick={handleThemeSwitch}>
+                  {
+                    theme ? <IoMdMoon className="text-[16px] scale-150 rounded-[20px]" /> :
+                      <IoMdSunny className="text-[16px] scale-150 rounded-[20px]" />
                   }
                 </Button>
               </div>

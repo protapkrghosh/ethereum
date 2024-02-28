@@ -12,7 +12,7 @@ const RewordContents = () => {
         <div>
           <div className='mt-[-200px]'>
             <div className="text-center">
-              <p className="text-white text-[30px] font-medium">Received a reward from us? <br /> Congratulations</p>
+              <p className="text-white dark:text-gray-500 text-[30px] font-medium">Received a reward from us? <br /> Congratulations</p>
               <p className="text-[#8877c3] w-[95%] md:w-[53%] xl:w-[42%] 2xl:w-[561px] mx-auto">If you’ve received the Ethereum Airdrop in the ongoing event you’re just a step away from calming your 10 ETH rewards for free</p>
             </div>
           </div>
