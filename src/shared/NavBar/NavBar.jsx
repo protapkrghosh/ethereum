@@ -3,7 +3,7 @@ import logo from "@/assets/icons/Vector.png"
 import Container from "@/SectionComs/Container/Container";
 import { Button } from "@/components/ui/button";
 import { IoMenu, IoClose } from "react-icons/io5";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import icon1 from "@/assets/icons/vector1.png"
 import icon2 from "@/assets/icons/Box.png"
 import icon3 from "@/assets/icons/Logout1.png"
@@ -18,6 +18,7 @@ import wallet from "@/assets/wallets/wallet.png"
 import { IoMdMoon } from "react-icons/io";
 import { IoMdSunny } from "react-icons/io";
 import { GoQuestion } from "react-icons/go";
+import useTheme from "@/components/useTheme";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
@@ -25,7 +26,8 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [color, setColor] = useState(false);
   const [changeBg, setChangeBg] = useState(false);
-  const [theme, setTheme] = useState("light");
+  const { theme, handleThemeSwitch } = useTheme();
+
 
   // Scrolling background color
   if (typeof window !== 'undefined') {
@@ -37,19 +39,6 @@ const NavBar = () => {
       }
     };
     window.addEventListener('scroll', changeColor);
-  }
-
-  // Dark light mode
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [theme]);
-
-  const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
   }
 
   return (
