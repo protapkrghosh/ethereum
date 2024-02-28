@@ -137,14 +137,14 @@ const NavBar = () => {
                   </Link>
                 </li>
 
-                {/* Small screen change background color */}
+                {/* Small screen dialog box */}
                 <div className="flex items-center">
                   <Dialog>
                     <DialogTrigger>
                       <Button className="text-[17px] dark:text-[#ffffff] font-light hover:bg-gradient-to-l px-6">Connect wallet</Button>
                     </DialogTrigger>
 
-                    <DialogContent className="bg-gradient-to-b from-[#44266f] via-[#131524] to-[#131524]">
+                    <DialogContent className={theme === 'dark' ? "bg-[#35353f]" : "bg-gradient-to-b from-[#44266f] via-[#131524] to-[#131524]" }>
                       <DialogHeader>
                         <DialogTitle className="flex justify-between items-center mb-[30px]">
                           {/* Tooltip question icon */}
@@ -167,42 +167,42 @@ const NavBar = () => {
                           <div>
                             <div className="space-y-4">
                               {/* meta mask */}
-                              <div className="bg-gradient-to-r from-[#6f5ce4] to-[#8768ee] rounded-xl">
-                                <Link to='/' className="flex justify-between items-center border border-[#6f5ce4] px-2 py-3 rounded-xl">
+                              <div className={theme === 'dark' ? 'bg-[#464653] border-none rounded-xl' : 'bg-gradient-to-r from-[#6f5ce4] to-[#8768ee] rounded-xl'}>
+                                <Link to='/' className="flex justify-between items-center border border-[#6f5ce4] dark:border-none px-2 py-3 rounded-xl">
                                   <div className="flex items-center">
                                     <img src={metaMask} alt="Meta Mask" className="w-[35px] mr-3" />
                                     <p className="text-[17px] text-[#FFFFFF]">MetaMask</p>
                                   </div>
-                                  <Link to="/" className='text-white text-[14px] font-medium bg-[#8f73ee] px-3 py-[5px] border border-[#8f73ee] rounded-md'>Connect</Link>
+                                  <Link to="/" className='text-white text-[14px] font-medium bg-[#8f73ee] dark:bg-[#705DE4] px-3 py-[5px] border border-[#8f73ee] dark:border-none rounded-md'>Connect</Link>
                                 </Link>
                               </div>
 
                               {/* Coinbase */}
-                              <Link to='/' className="flex items-center bg-gradient-to-r from-[#321b4cbe] to-[#372e6a54] border border-[#42418a50] px-2 py-3 rounded-xl">
+                              <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#321b4cbe] to-[#372e6a54] border border-[#42418a50]"}`}>
                                 <img src={coinbase} alt="Meta Mask" className="w-[35px] mr-3" />
                                 <p className="text-[17px] text-[#FFFFFF]">Coinbase Wallet</p>
                               </Link>
 
                               {/* Trust */}
-                              <Link to='/' className="flex items-center bg-gradient-to-r from-[#1d1831] to-[#20203c77] border border-[#21233c] px-2 py-3 rounded-xl">
+                              <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#1d1831] to-[#20203c77] border border-[#21233c]"}`}>
                                 <img src={trust} alt="Meta Mask" className="w-[35px] mr-3" />
                                 <p className="text-[17px] text-[#FFFFFF]">Trust Wallet</p>
                               </Link>
 
                               {/* Trezor */}
-                              <Link to='/' className="flex items-center bg-gradient-to-r from-[#161828] to-[#151727] border border-[#21233c] px-2 py-3 rounded-xl">
+                              <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] border border-[#21233c]"}`}>
                                 <img src={trezor} alt="Meta Mask" className="w-[35px] mr-3" />
                                 <p className="text-[17px] text-[#FFFFFF]">Trezor</p>
                               </Link>
 
                               {/* Ledger */}
-                              <Link to='/' className="flex items-center bg-gradient-to-r from-[#161828] to-[#151727] border border-[#21233c] px-2 py-3 rounded-xl">
+                              <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] border border-[#21233c]"}`}>
                                 <img src={ledger} alt="Meta Mask" className="w-[35px] mr-3" />
                                 <p className="text-[17px] text-[#FFFFFF]">Ledger</p>
                               </Link>
 
                               {/* Other Wallets */}
-                              <Link to='/' className="flex items-center bg-gradient-to-r from-[#161828] to-[#151727] border border-[#21233c] px-2 py-3 rounded-xl">
+                              <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] border border-[#21233c]"}`}>
                                 <img src={otherWallets} alt="Meta Mask" className="w-[35px] mr-3" />
                                 <p className="text-[17px] text-[#FFFFFF]">Other Wallets</p>
                               </Link>
@@ -230,7 +230,7 @@ const NavBar = () => {
               </ul>
             </div>
 
-            {/* Large device action button */}
+            {/* Large device action button and dialog box */}
             <div className="hidden md:block">
               <div className="flex items-center">
                 <Dialog>
