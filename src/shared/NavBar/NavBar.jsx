@@ -63,37 +63,39 @@ const NavBar = () => {
                 <img src={logo} alt="Logo" className="w-[141px]" />
               </Link>
 
-              <ul className={`md:flex md:items-center md:pb-0 pb-12 bg-[#242541] md:bg-transparent absolute md:static md:z-auto z-[-1px] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-linear opacity-0 md:opacity-100 space-y-4 md:space-y-0 border border-[#312956] dark:border-none rounded-[12px] ${open ? 'top-[78px] opacity-100' : 'top-[-490px]'}`}>
+              <div className="hidden md:block">
+                <ul className={`md:flex md:items-center md:pb-0 pb-12 bg-[#242541] md:bg-transparent absolute md:static md:z-auto z-[-1px] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-linear opacity-0 md:opacity-100 space-y-4 md:space-y-0 border border-[#312956] dark:border-none rounded-[12px] ${open ? 'top-[78px] opacity-100' : 'top-[-490px]'}`}>
 
-                <li className="flex items-center uppercase bg-gradient-to-r from-[#6F5CE4] to-[#8868EE] py-[10px] rounded-[12px] px-[16px] 2xl:px-[20px]">
-                  <Link to="/" className="text-[15px] text-[#fff] font-thin flex items-center">
-                    <img src={icon1} alt="Icons" className="mr-2" />
-                    Stake
-                  </Link>
-                </li>
+                  <li className="flex items-center uppercase bg-gradient-to-r from-[#6F5CE4] to-[#8868EE] py-[10px] rounded-[12px] px-[16px] 2xl:px-[20px]">
+                    <Link to="/" className="text-[15px] text-[#fff] font-thin flex items-center">
+                      <img src={icon1} alt="Icons" className="mr-2" />
+                      Stake
+                    </Link>
+                  </li>
 
-                <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 2xl:px-5 duration-500" title="Coming soon">
-                  <Link to="" className="text-[15px] text-[#68699e] flex items-center">
-                    <img src={icon2} alt="Icons" className="mr-2" />
-                    Myterybox
-                  </Link>
-                </li>
+                  <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 2xl:px-5 duration-500" title="Coming soon">
+                    <Link to="" className="text-[15px] text-[#68699e] flex items-center">
+                      <img src={icon2} alt="Icons" className="mr-2" />
+                      Myterybox
+                    </Link>
+                  </li>
 
-                <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 2xl:px-5" title="Coming soon">
-                  <Link to="" className="text-[15px] text-[#68699e] flex items-center">
-                    <img src={icon3} alt="Icons" className="mr-2" />
-                    Withdrawals
-                  </Link>
-                </li>
+                  <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 2xl:px-5" title="Coming soon">
+                    <Link to="" className="text-[15px] text-[#68699e] flex items-center">
+                      <img src={icon3} alt="Icons" className="mr-2" />
+                      Withdrawals
+                    </Link>
+                  </li>
 
-                <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 2xl:px-5" title="Coming soon">
-                  <Link to="" className="text-[15px] text-[#68699e] flex items-center">
-                    <img src={icon4} alt="Icons" className="mr-2" />
-                    Rewards
-                  </Link>
-                </li>
+                  <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 2xl:px-5" title="Coming soon">
+                    <Link to="" className="text-[15px] text-[#68699e] flex items-center">
+                      <img src={icon4} alt="Icons" className="mr-2" />
+                      Rewards
+                    </Link>
+                  </li>
 
-              </ul>
+                </ul>
+              </div>
             </div>
 
             {/* Toggle hamburger menu */}
@@ -105,7 +107,7 @@ const NavBar = () => {
 
             {/* Small device menu */}
             <div className="block md:hidden">
-              <ul className={`md:flex md:items-center md:pb-0 pb-12 bg-[#242541] md:bg-transparent absolute md:static md:z-auto z-[-1px] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-linear opacity-0 md:opacity-100 space-y-4 md:space-y-0 border border-[#312956] rounded-[12px] ${open ? 'top-[75px] opacity-100' : 'top-[-490px]'}`}>
+              <ul className={`md:flex md:items-center md:pb-0 pb-12 bg-[#242541] dark:bg-[#7a8aa0] md:bg-transparent absolute md:static md:z-auto z-[-1px] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-linear opacity-0 md:opacity-100 space-y-4 md:space-y-0 border border-[#312956] rounded-[12px] ${open ? 'top-[75px] opacity-100' : 'top-[-490px]'}`}>
 
                 <li className="flex items-center uppercase bg-gradient-to-r from-[#6F5CE4] to-[#8868EE] py-[10px] rounded-[12px] px-4 mr-9 md:mr-0 mt-3 md:mt-0" title="Coming soon">
                   <Link to="/" className="text-[15px] text-[#fff] font-thin flex items-center">
@@ -115,21 +117,21 @@ const NavBar = () => {
                 </li>
 
                 <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4 duration-500" title="Coming soon">
-                  <Link to="/" className="text-[15px] text-[#68699e] flex items-center">
+                  <Link to="/" className="text-[15px] text-[#68699e] dark:text-[#ffffff] flex items-center">
                     <img src={icon2} alt="Icons" className="mr-2" />
                     Myterybox
                   </Link>
                 </li>
 
                 <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4" title="Coming soon">
-                  <Link to="/" className="text-[15px] text-[#68699e] flex items-center">
+                  <Link to="/" className="text-[15px] text-[#68699e] dark:text-[#ffffff] flex items-center">
                     <img src={icon3} alt="Icons" className="mr-2" />
                     Withdrawals
                   </Link>
                 </li>
 
                 <li className="flex items-center uppercase py-[10px] rounded-[12px] px-4" title="Coming soon">
-                  <Link to="/" className="text-[15px] text-[#68699e] flex items-center">
+                  <Link to="/" className="text-[15px] text-[#68699e] dark:text-[#ffffff] flex items-center">
                     <img src={icon4} alt="Icons" className="mr-2" />
                     Rewards
                   </Link>
@@ -139,7 +141,7 @@ const NavBar = () => {
                 <div className="flex items-center">
                   <Dialog>
                     <DialogTrigger>
-                      <Button className="text-[17px] font-light hover:bg-gradient-to-l px-6">Connect wallet</Button>
+                      <Button className="text-[17px] dark:text-[#ffffff] font-light hover:bg-gradient-to-l px-6">Connect wallet</Button>
                     </DialogTrigger>
 
                     <DialogContent className="bg-gradient-to-b from-[#44266f] via-[#131524] to-[#131524]">
@@ -218,9 +220,9 @@ const NavBar = () => {
                     </DialogContent>
                   </Dialog>
 
-                  <Button onClick={() => setChangeBg(!changeBg)} className="ml-3 p-4">
+                  <Button onClick={() => { setChangeBg(!changeBg); handleThemeSwitch(); }} className="ml-3 p-4">
                     {
-                      changeBg ? <IoMdSunny className="text-[16px] scale-150 rounded-[20px]" /> :
+                      changeBg ? <IoMdSunny className="text-[16px] dark:text-[#ffffff] scale-150 rounded-[20px]" /> :
                         <IoMdMoon className="text-[16px] scale-150 rounded-[20px]" />
                     }
                   </Button>
