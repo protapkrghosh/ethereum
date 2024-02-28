@@ -30,7 +30,7 @@ const Connect = () => {
             <p className="text-white dark:text-[#273852] text-[30px] font-medium">Connect your wallet with Secret <br /> Recovery Phrase</p>
           </div>
 
-          {/* card section imput */}
+          {/* card section input */}
           <div>
             <div className="bg-[#11121F] dark:bg-[#F2F4F6] mt-[48px] w-full md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto pb-60">
               <div className="border border-[#1f213a] dark:border-[#7a8aa062] bg-[#151727]  dark:bg-[#F2F4F6] p-6 rounded-[18px]">
