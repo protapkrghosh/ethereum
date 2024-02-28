@@ -3,7 +3,7 @@ import logo from "@/assets/icons/Vector.png"
 import Container from "@/SectionComs/Container/Container";
 import { Button } from "@/components/ui/button";
 import { IoMenu, IoClose } from "react-icons/io5";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import icon1 from "@/assets/icons/vector1.png"
 import icon2 from "@/assets/icons/Box.png"
 import icon3 from "@/assets/icons/Logout1.png"
@@ -25,6 +25,7 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [color, setColor] = useState(false);
   const [changeBg, setChangeBg] = useState(false);
+  const [theme, setTheme] = useState("light");
 
   if (typeof window !== 'undefined') {
     const changeColor = () => {
@@ -37,10 +38,23 @@ const NavBar = () => {
     window.addEventListener('scroll', changeColor);
   }
 
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  }
+
   return (
-    <div className={color ? 'sticky top-0 z-50 duration-300 bg-[#11121F] bg-opacity-90 text-[#d1d1d1] shadow-md' : 'pt-0 duration-300 bg-[#11121f]'}>
+    <div className={color ? 'sticky top-0 z-50 duration-300 bg-[#11121F] dark:bg-[#F2F4F6] bg-opacity-90 text-[#d1d1d1] shadow-md' : 'pt-0 duration-300 bg-[#11121f] dark:bg-[#F2F4F6]'}>
       <Container>
-        <div className="w-full top-0 py-3 border-b border-[#1d2030a8] left-0 z-10">
+        <div className="w-full top-0 py-3 border-b border-[#1d2030a8] dark:border-none left-0 z-10">
           <div className="md:flex justify-between items-center py-4">
             {/* Large device menu */}
             <div className="flex">
@@ -49,7 +63,7 @@ const NavBar = () => {
                 <img src={logo} alt="Logo" className="w-[141px]" />
               </Link>
 
-              <ul className={`md:flex md:items-center md:pb-0 pb-12 bg-[#242541] md:bg-transparent absolute md:static md:z-auto z-[-1px] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-linear opacity-0 md:opacity-100 space-y-4 md:space-y-0 border border-[#312956] rounded-[12px] ${open ? 'top-[78px] opacity-100' : 'top-[-490px]'}`}>
+              <ul className={`md:flex md:items-center md:pb-0 pb-12 bg-[#242541] md:bg-transparent absolute md:static md:z-auto z-[-1px] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-linear opacity-0 md:opacity-100 space-y-4 md:space-y-0 border border-[#312956] dark:border-none rounded-[12px] ${open ? 'top-[78px] opacity-100' : 'top-[-490px]'}`}>
 
                 <li className="flex items-center uppercase bg-gradient-to-r from-[#6F5CE4] to-[#8868EE] py-[10px] rounded-[12px] px-[16px] 2xl:px-[20px]">
                   <Link to="/" className="text-[15px] text-[#fff] font-thin flex items-center">
@@ -219,7 +233,7 @@ const NavBar = () => {
               <div className="flex items-center">
                 <Dialog>
                   <DialogTrigger>
-                    <Button className="text-[17px] font-light hover:bg-gradient-to-l px-6">Connect wallet</Button>
+                    <Button className="text-[17px] dark:text-[#ffffff] font-light hover:bg-gradient-to-l px-6">Connect wallet</Button>
                   </DialogTrigger>
 
                   <DialogContent className="bg-gradient-to-b from-[#44266f] via-[#131524] to-[#131524]">
@@ -298,12 +312,13 @@ const NavBar = () => {
                   </DialogContent>
                 </Dialog>
 
-                <Button onClick={() => setChangeBg(!changeBg)} className=" hover:bg-gradient-to-l ml-3 p-4">
+                <Button onClick={() => { setChangeBg(!changeBg); handleThemeSwitch(); }} className=" hover:bg-gradient-to-l ml-3 p-4">
                   {
-                    changeBg ? <IoMdSunny className="text-[16px] scale-150 rounded-[20px]" /> :
+                    changeBg ? <IoMdSunny className="text-[16px] dark:text-[#ffffff] scale-150 rounded-[20px]" /> :
                       <IoMdMoon className="text-[16px] scale-150 rounded-[20px]" />
                   }
                 </Button>
+
               </div>
             </div>
           </div>
