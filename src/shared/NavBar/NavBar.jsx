@@ -320,7 +320,6 @@ const NavBar = () => {
                       <IoMdMoon className="text-[16px] scale-150 rounded-[20px]" />
                   }
                 </Button>
-
               </div>
             </div>
           </div>
