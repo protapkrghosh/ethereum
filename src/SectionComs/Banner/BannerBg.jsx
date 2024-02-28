@@ -21,7 +21,7 @@ const BannerBg = () => {
   return (
     <div>
       <div className='hidden md:block'>
-        <div className="bg-[#11121F] md:flex justify-center -my-[2px]">
+        <div className="bg-[#11121F] dark:bg-[#F2F4F6] md:flex justify-center -my-[2px]">
           <div className='shadowOne w-[360px] md:w-[435.622px] h-[225px] md:h-[307.686px]'>
           </div>
           <div className='shadowTwo'>

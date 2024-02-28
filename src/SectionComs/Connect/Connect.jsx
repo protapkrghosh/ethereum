@@ -69,24 +69,24 @@ const Connect = () => {
   const [show, setShow] = useState(false);
 
   return (
-    <div className='bg-[#11121F]'>
+    <div className='bg-[#11121F] dark:bg-[#F2F4F6]'>
       <Container>
         <BannerBg />
 
         <div className='mt-[-200px]'>
           <div className="text-center">
-            <p className="text-white text-[30px] font-medium">Connect your wallet with Secret <br /> Recovery Phrase</p>
+            <p className="text-white dark:text-[#273852] text-[30px] font-medium">Connect your wallet with Secret <br /> Recovery Phrase</p>
           </div>
 
           {/* card section imput */}
           <div>
-            <div className="bg-[#11121F] mt-[48px] w-[95%] md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto pb-60">
-              <div className="border border-[#1f213a] bg-[#151727] p-6 rounded-[18px]">
+            <div className="bg-[#11121F] dark:bg-[#F2F4F6] mt-[48px] w-[95%] md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto pb-60">
+              <div className="border border-[#1f213a] dark:border-[#7a8aa062] bg-[#151727]  dark:bg-[#F2F4F6] p-6 rounded-[18px]">
                 <div>
-                  <p className=" text-[#fff] font-urbanist text-[20px] font-semibold mt-[32px] mb-[24px]">12 - word recovery phrase</p>
+                  <p className=" text-[#ffffff]  dark:text-[#273852] font-urbanist text-[20px] font-semibold mt-[32px] mb-[24px]">12 - word recovery phrase</p>
                   <div className="mb-[32px]">
                     <form>
-                      <Textarea type="textarea" className="h-[154px] border border-[#1f213a] text-[#fff] rounded-[18px] bg-transparent focus-visible:ring-offset-1 focus-visible:ring-offset-[#373a64]" />
+                      <Textarea type="textarea" className="h-[154px] border border-[#1f213a] dark:border-[#7a8aa062] text-[#fff] rounded-[18px] bg-transparent focus-visible:ring-offset-1 focus-visible:ring-offset-[#373a64]" />
 
                       {/* <input type="submit" value="Connect wallet" className=' flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] px-3.5 py-4 border border-[#473e8b] rounded-[12px] w-full mt-[32px] cursor-pointer' /> */}
                     </form>
@@ -97,7 +97,7 @@ const Connect = () => {
 
                     <Dialog>
                       <DialogTrigger className="w-full">
-                        <button onClick={() => setShow(!show)} className='w-full flex justify-center text-[#BEC3FF80] text-[20px] font-medium bg-[#6E75D20F] hover:bg-[#6e75d213] px-3.5 py-4 border border-[#252846ce] hover:border-[#31345e] hover:bg-[#705DE4] hover:text-white rounded-[12px] duration-300'>Connect wallet</button>
+                        <button onClick={() => setShow(!show)} className='w-full flex justify-center text-[#BEC3FF80] dark:text-white text-[20px] font-medium bg-[#6E75D20F] hover:bg-[#6e75d213] px-3.5 py-4 border border-[#252846ce] dark:border-none hover:bg-[#705DE4] dark:bg-[#705DE4] dark:hover:bg-[#6f5de4e7] hover:text-white rounded-[12px] duration-300'>Connect wallet</button>
                       </DialogTrigger>
 
                       <DialogContent className="bg-gradient-to-b from-[#44266f] via-[#131524] to-[#131524] lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
