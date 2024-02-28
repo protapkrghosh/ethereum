@@ -32,7 +32,7 @@ const Connect = () => {
 
           {/* card section imput */}
           <div>
-            <div className="bg-[#11121F] dark:bg-[#F2F4F6] mt-[48px] w-[95%] md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto pb-60">
+            <div className="bg-[#11121F] dark:bg-[#F2F4F6] mt-[48px] w-full md:w-[576px] lg:w-[576px] xl:w-[676px] 2xl:w-[764px] mx-auto pb-60">
               <div className="border border-[#1f213a] dark:border-[#7a8aa062] bg-[#151727]  dark:bg-[#F2F4F6] p-6 rounded-[18px]">
                 <div>
                   <p className=" text-[#ffffff]  dark:text-[#273852] font-urbanist text-[20px] font-semibold mt-[32px] mb-[24px]">12 - word recovery phrase</p>
