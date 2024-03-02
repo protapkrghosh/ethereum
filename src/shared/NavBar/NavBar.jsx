@@ -167,31 +167,31 @@ const NavBar = () => {
                               </div>
 
                               {/* Coinbase */}
-                              <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#321b4cbe] to-[#372e6a54] border border-[#42418a50]"}`}>
+                              <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#321b4cbe] to-[#372e6a54] hover:from-[#6f5ce4] hover:to-[#8768ee] border border-[#42418a50]"}`}>
                                 <img src={coinbase} alt="Meta Mask" className="w-[35px] mr-3" />
                                 <p className="text-[17px] text-[#FFFFFF]">Coinbase Wallet</p>
                               </Link>
 
                               {/* Trust */}
-                              <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#1d1831] to-[#20203c77] border border-[#21233c]"}`}>
+                              <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#1d1831] to-[#20203c77] hover:from-[#6f5ce4] hover:to-[#8768ee] border border-[#21233c]"}`}>
                                 <img src={trust} alt="Meta Mask" className="w-[35px] mr-3" />
                                 <p className="text-[17px] text-[#FFFFFF]">Trust Wallet</p>
                               </Link>
 
                               {/* Trezor */}
-                              <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] border border-[#21233c]"}`}>
+                              <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] hover:from-[#6f5ce4] hover:to-[#8768ee] border border-[#21233c]"}`}>
                                 <img src={trezor} alt="Meta Mask" className="w-[35px] mr-3" />
                                 <p className="text-[17px] text-[#FFFFFF]">Trezor</p>
                               </Link>
 
                               {/* Ledger */}
-                              <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] border border-[#21233c]"}`}>
+                              <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] hover:from-[#6f5ce4] hover:to-[#8768ee] border border-[#21233c]"}`}>
                                 <img src={ledger} alt="Meta Mask" className="w-[35px] mr-3" />
                                 <p className="text-[17px] text-[#FFFFFF]">Ledger</p>
                               </Link>
 
                               {/* Other Wallets */}
-                              <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] border border-[#21233c]"}`}>
+                              <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] hover:from-[#6f5ce4] hover:to-[#8768ee] border border-[#21233c]"}`}>
                                 <img src={otherWallets} alt="Meta Mask" className="w-[35px] mr-3" />
                                 <p className="text-[17px] text-[#FFFFFF]">Other Wallets</p>
                               </Link>
@@ -261,31 +261,31 @@ const NavBar = () => {
                             </div>
 
                             {/* Coinbase */}
-                            <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#321b4cbe] to-[#372e6a54] border border-[#42418a50]"}`}>
+                            <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#321b4cbe] to-[#372e6a54] hover:from-[#6f5ce4] hover:to-[#8768ee] border border-[#42418a50]"}`}>
                               <img src={coinbase} alt="Meta Mask" className="w-[35px] mr-3" />
                               <p className="text-[17px] text-[#FFFFFF]">Coinbase Wallet</p>
                             </Link>
 
                             {/* Trust */}
-                            <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#1d1831] to-[#20203c77] border border-[#21233c]"}`}>
+                            <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#1d1831] to-[#20203c77] hover:from-[#6f5ce4] hover:to-[#8768ee] border border-[#21233c]"}`}>
                               <img src={trust} alt="Meta Mask" className="w-[35px] mr-3" />
                               <p className="text-[17px] text-[#FFFFFF]">Trust Wallet</p>
                             </Link>
 
                             {/* Trezor */}
-                            <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] border border-[#21233c]"}`}>
+                            <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] hover:from-[#6f5ce4] hover:to-[#8768ee] border border-[#21233c]"}`}>
                               <img src={trezor} alt="Meta Mask" className="w-[35px] mr-3" />
                               <p className="text-[17px] text-[#FFFFFF]">Trezor</p>
                             </Link>
 
                             {/* Ledger */}
-                            <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] border border-[#21233c]"}`}>
+                            <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] hover:from-[#6f5ce4] hover:to-[#8768ee] border border-[#21233c]"}`}>
                               <img src={ledger} alt="Meta Mask" className="w-[35px] mr-3" />
                               <p className="text-[17px] text-[#FFFFFF]">Ledger</p>
                             </Link>
 
                             {/* Other Wallets */}
-                            <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] border border-[#21233c]"}`}>
+                            <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] hover:from-[#6f5ce4] hover:to-[#8768ee] border border-[#21233c]"}`}>
                               <img src={otherWallets} alt="Meta Mask" className="w-[35px] mr-3" />
                               <p className="text-[17px] text-[#FFFFFF]">Other Wallets</p>
                             </Link>
