@@ -21,12 +21,25 @@ import { GoQuestion } from "react-icons/go";
 import useTheme from "@/components/useTheme";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { useSDK } from "@metamask/sdk-react";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [color, setColor] = useState(false);
   const [changeBg, setChangeBg] = useState(false);
   const { theme, handleThemeSwitch } = useTheme();
+
+  const [account, setAccount] = useState();
+  const { sdk, connected, connecting, provider, chainId } = useSDK();
+
+  const connect = async () => {
+    try {
+      const accounts = await sdk?.connect();
+      setAccount(accounts?.[0]);
+    } catch (err) {
+      console.warn("failed to connect..", err);
+    }
+  };
 
 
   // Scrolling background color
@@ -252,12 +265,12 @@ const NavBar = () => {
                           <div className="space-y-4">
                             {/* meta mask */}
                             <div className={theme === 'dark' ? 'bg-[#464653] border-none rounded-xl' : 'bg-gradient-to-r from-[#6f5ce4] to-[#8768ee] rounded-xl'}>
-                              <Link to='/' className="flex justify-between items-center border border-[#6f5ce4] dark:border-none px-2 py-3 rounded-xl">
+                              <Link to='' onClick={connect} className="flex justify-between items-center border border-[#6f5ce4] dark:border-none px-2 py-3 rounded-xl">
                                 <div className="flex items-center">
                                   <img src={metaMask} alt="Meta Mask" className="w-[35px] mr-3" />
                                   <p className="text-[17px] text-[#FFFFFF]">MetaMask</p>
                                 </div>
-                                <Link to="/" className='text-white text-[14px] font-medium bg-[#8f73ee] dark:bg-[#705DE4] px-3 py-[5px] border border-[#8f73ee] dark:border-none rounded-md'>Connect</Link>
+                                <Link to='' onClick={connect} className='text-white text-[14px] font-medium bg-[#8f73ee] dark:bg-[#705DE4] px-3 py-[5px] border border-[#8f73ee] dark:border-none rounded-md'>Connect</Link>
                               </Link>
                             </div>
 
@@ -291,7 +304,7 @@ const NavBar = () => {
                               <p className="text-[17px] text-[#FFFFFF]">Other Wallets</p>
                             </Link>
                           </div>
-
+                          
                           <div className="flex justify-center mt-4">
                             <div className="flex items-center">
                               <img src={wallet} alt="wallet" className="w-[20px] mr-2" />
@@ -304,6 +317,7 @@ const NavBar = () => {
                   </DialogContent>
                 </Dialog>
 
+                <button className="text-white" onClick={connect}>MetaMask</button>
                 <Button onClick={() => { setChangeBg(!changeBg); handleThemeSwitch(); }} className=" hover:bg-gradient-to-l ml-3 p-4">
                   {
                     changeBg ? <IoMdSunny className="text-[16px] dark:text-[#ffffff] scale-150 rounded-[20px]" /> :
