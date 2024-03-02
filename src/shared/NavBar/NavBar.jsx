@@ -133,7 +133,7 @@ const NavBar = () => {
                       <Button className="text-[17px] dark:text-[#ffffff] font-light hover:bg-gradient-to-l px-6">Connect wallet</Button>
                     </DialogTrigger>
 
-                    <DialogContent className={theme === 'dark' ? "bg-[#35353f]" : "bg-gradient-to-b from-[#44266f] via-[#131524] to-[#131524]" }>
+                    <DialogContent className={theme === 'dark' ? "bg-[#35353f]" : "bg-gradient-to-b from-[#44266f] via-[#131524] to-[#131524]"}>
                       <DialogHeader>
                         <DialogTitle className="flex justify-between items-center mb-[30px]">
                           {/* Tooltip question icon */}
@@ -249,16 +249,15 @@ const NavBar = () => {
                       <DialogDescription>
                         <div>
                           <div className="space-y-4">
+
                             {/* meta mask */}
-                            <div className={theme === 'dark' ? 'bg-[#464653] border-none rounded-xl' : 'bg-gradient-to-r from-[#6f5ce4] to-[#8768ee] rounded-xl'}>
-                              <Link to='' className="flex justify-between items-center border border-[#6f5ce4] dark:border-none px-2 py-3 rounded-xl">
-                                <div className="flex items-center">
-                                  <img src={metaMask} alt="Meta Mask" className="w-[35px] mr-3" />
-                                  <p className="text-[17px] text-[#FFFFFF]">MetaMask</p>
-                                </div>
-                                <Link to='' className='text-white text-[14px] font-medium bg-[#8f73ee] dark:bg-[#705DE4] px-3 py-[5px] border border-[#8f73ee] dark:border-none rounded-md'>Connect</Link>
-                              </Link>
-                            </div>
+                            <button className={`flex justify-between items-center rounded-xl px-2 py-3 w-full ${theme === 'dark' ? 'bg-[#464653] border-none' : 'bg-gradient-to-r from-[#6f5ce4] to-[#8768ee] border border-[#6f5ce4] dark:border-none'}`}>
+                              <div className="flex items-center">
+                                <img src={metaMask} alt="Meta Mask" className="w-[35px] mr-3" />
+                                <p className="text-[17px] text-[#FFFFFF]">MetaMask</p>
+                              </div>
+                              <Link to='' className='text-white text-[14px] font-medium bg-[#8f73ee] dark:bg-[#705DE4] px-3 py-[5px] border border-[#8f73ee] dark:border-none rounded-md'>Connect</Link>
+                            </button>
 
                             {/* Coinbase */}
                             <Link to='/' className={`flex items-center px-2 py-3 rounded-xl ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#321b4cbe] to-[#372e6a54] hover:from-[#6f5ce4] hover:to-[#8768ee] border border-[#42418a50]"}`}>
@@ -290,7 +289,7 @@ const NavBar = () => {
                               <p className="text-[17px] text-[#FFFFFF]">Other Wallets</p>
                             </Link>
                           </div>
-                          
+
                           <div className="flex justify-center mt-4">
                             <div className="flex items-center">
                               <img src={wallet} alt="wallet" className="w-[20px] mr-2" />
