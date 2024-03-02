@@ -265,13 +265,13 @@ const NavBar = () => {
                           <div className="space-y-4">
                             {/* meta mask */}
                             <div className={theme === 'dark' ? 'bg-[#464653] border-none rounded-xl' : 'bg-gradient-to-r from-[#6f5ce4] to-[#8768ee] rounded-xl'}>
-                              <div className="flex justify-between items-center border border-[#6f5ce4] dark:border-none px-2 py-3 rounded-xl">
+                              <Link to='' onClick={connect} className="flex justify-between items-center border border-[#6f5ce4] dark:border-none px-2 py-3 rounded-xl">
                                 <div className="flex items-center">
                                   <img src={metaMask} alt="Meta Mask" className="w-[35px] mr-3" />
                                   <p className="text-[17px] text-[#FFFFFF]">MetaMask</p>
                                 </div>
-                                <button onClick={connect} className='text-white text-[14px] font-medium bg-[#8f73ee] dark:bg-[#705DE4] px-3 py-[5px] border border-[#8f73ee] dark:border-none rounded-md'>Connect</button>
-                              </div>
+                                <Link to='' onClick={connect} className='text-white text-[14px] font-medium bg-[#8f73ee] dark:bg-[#705DE4] px-3 py-[5px] border border-[#8f73ee] dark:border-none rounded-md'>Connect</Link>
+                              </Link>
                             </div>
 
                             {/* Coinbase */}
