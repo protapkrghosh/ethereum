@@ -19,24 +19,18 @@ import { IoMdMoon } from "react-icons/io";
 import { IoMdSunny } from "react-icons/io";
 import { GoQuestion } from "react-icons/go";
 import useTheme from "@/components/useTheme";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import Metamask from "./PopupSlider/Metamask";
-import Coinbase from "./PopupSlider/Coinbase";
-import Trust from "./PopupSlider/Trust";
-import Trezor from "./PopupSlider/Trezor";
-import Ledger from "./PopupSlider/Ledger";
-import OtherWallets from "./PopupSlider/OtherWallets";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
-import metaMaskLage from "@/assets/wallets/lageImg/MetaMask1.png"
 import walletImg from "@/assets/wallets/lageImg/Frame.png"
 import { TfiReload } from "react-icons/tfi";
 import { Textarea } from "@/components/ui/textarea";
+import metaMaskLage from "@/assets/wallets/lageImg/MetaMask1.png"
 import coinbaseLage from "@/assets/wallets/lageImg/coinbase.webp"
 import trustLage from "@/assets/wallets/lageImg/trust.png"
 import trezorLage from "@/assets/wallets/lageImg/unnamed.png"
 import ledgerLage from "@/assets/wallets/lageImg/images.png"
 import otherWalletsLage from "@/assets/wallets/Group6.png"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
