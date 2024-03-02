@@ -317,7 +317,6 @@ const NavBar = () => {
                   </DialogContent>
                 </Dialog>
 
-                <button className="text-white" onClick={connect}>MetaMask</button>
                 <Button onClick={() => { setChangeBg(!changeBg); handleThemeSwitch(); }} className=" hover:bg-gradient-to-l ml-3 p-4">
                   {
                     changeBg ? <IoMdSunny className="text-[16px] dark:text-[#ffffff] scale-150 rounded-[20px]" /> :
