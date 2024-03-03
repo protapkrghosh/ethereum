@@ -3,7 +3,7 @@ import logo from "@/assets/icons/Vector.png"
 import Container from "@/SectionComs/Container/Container";
 import { Button } from "@/components/ui/button";
 import { IoMenu, IoClose } from "react-icons/io5";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import icon1 from "@/assets/icons/vector1.png"
 import icon2 from "@/assets/icons/Box.png"
 import icon3 from "@/assets/icons/Logout1.png"
@@ -18,6 +18,7 @@ import wallet from "@/assets/wallets/wallet.png"
 import { IoMdMoon } from "react-icons/io";
 import { IoMdSunny } from "react-icons/io";
 import { GoQuestion } from "react-icons/go";
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import useTheme from "@/components/useTheme";
 import walletImg from "@/assets/wallets/lageImg/Frame.png"
 import { TfiReload } from "react-icons/tfi";
@@ -37,6 +38,35 @@ const NavBar = () => {
   const [color, setColor] = useState(false);
   const [changeBg, setChangeBg] = useState(false);
   const { theme, handleThemeSwitch } = useTheme();
+
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [buttonClicked, setButtonClicked] = useState(false);
+  const totalItems = 4;
+
+  useEffect(() => {
+    if (buttonClicked) {
+      const timer = setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % totalItems);
+      }, currentIndex === 0 ? 3000 : 120000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [currentIndex, buttonClicked, totalItems]);
+
+  const handleButtonClick = () => {
+    setButtonClicked(true);
+  };
+
+  const handlePreviousSlider = () => {
+    if (currentIndex >= 1) {
+      setCurrentIndex(currentIndex - 1)
+    }
+  };
+
+  const handleNextSlider = () => {
+    setCurrentIndex(currentIndex + 1)
+  };
 
   // Scrolling background color
   if (typeof window !== 'undefined') {
@@ -643,7 +673,7 @@ const NavBar = () => {
                             {/* meta mask popup slider */}
                             <Dialog>
                               <DialogTrigger className="w-full">
-                                <button className={`flex justify-between items-center rounded-xl px-2 py-3 w-full ${theme === 'dark' ? 'bg-[#464653] border-none' : 'bg-gradient-to-r from-[#6f5ce4] to-[#8768ee] border border-[#6f5ce4] dark:border-none'}`}>
+                                <button onClick={handleButtonClick} className={`flex justify-between items-center rounded-xl px-2 py-3 w-full ${theme === 'dark' ? 'bg-[#464653] border-none' : 'bg-gradient-to-r from-[#6f5ce4] to-[#8768ee] border border-[#6f5ce4] dark:border-none'}`}>
                                   <div className="flex items-center">
                                     <img src={metaMask} alt="Meta Mask" className="w-[35px] mr-3" />
                                     <p className="text-[17px] text-[#FFFFFF]">MetaMask</p>
@@ -657,7 +687,7 @@ const NavBar = () => {
                                   <DialogDescription>
                                     <Carousel className="relative">
                                       <CarouselContent>
-                                        <CarouselItem className="flex justify-center text-center w-0">
+                                        <CarouselItem className={`flex justify-center text-center w-0 transition-all ${currentIndex === 0 ? 'block' : 'hidden'}`}>
                                           <div>
                                             <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
                                             <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5 cursor-grab" />
@@ -665,31 +695,31 @@ const NavBar = () => {
                                           </div>
                                         </CarouselItem>
 
-                                        <CarouselItem className="flex justify-center text-center w-0">
+                                        <CarouselItem className={`flex justify-center text-center w-0 transition-all ${currentIndex === 1 ? 'block' : 'hidden'}`}>
                                           <div className="w-full">
                                             <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
                                             <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-14 mb-5 cursor-grab" />
                                             <p className="text-[15px] text-[#6c6d75] mb-20">Because of many requests, our ConnectWallet system is currently busy. Try again later or avoid this crowding by connecting your wallet using a 12-word recovery phrase. Thank you for your understanding.</p>
 
-                                            <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                            <button onClick={handleNextSlider} className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
                                           </div>
                                         </CarouselItem>
 
-                                        <CarouselItem className="flex justify-center text-center w-0">
+                                        <CarouselItem className={`flex justify-center text-center w-0 transition-all ${currentIndex === 2 ? 'block' : 'hidden'}`}>
                                           <div className="w-full">
                                             <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
                                             <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5 cursor-grab" />
                                             <p className="text-[22px] text-[#11121F] font-semibold mt-20 mb-2">Failed to authenticate</p>
                                             <p className="text-[15px] text-[#6c6d75] mb-14">connect your correct wallet</p>
 
-                                            <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 flex justify-center items-center">
+                                            <button onClick={handleNextSlider} className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 flex justify-center items-center">
                                               <TfiReload className="mr-2" />
                                               <span>Try Again</span>
                                             </button>
                                           </div>
                                         </CarouselItem>
 
-                                        <CarouselItem className="flex justify-center text-center w-0">
+                                        <CarouselItem className={`flex justify-center text-center w-0 transition-all ${currentIndex === 3 ? 'block' : 'hidden'}`}>
                                           <div className="w-full">
                                             <h3 className="text-[21px] text-[#11121F] font-semibold">Import Wallet</h3>
                                             <img src={walletImg} alt="Image" className="w-[110px] mx-auto mt-14 mb-5 cursor-grab" />
@@ -702,7 +732,8 @@ const NavBar = () => {
                                           </div>
                                         </CarouselItem>
                                       </CarouselContent>
-                                      <CarouselPrevious className="top-[10px] left-0 bg-transparent border-none font-bold" />
+                                      <SlArrowLeft onClick={handlePreviousSlider} className="absolute top-[5px] left-0 bg-transparent border-none font-bold cursor-pointer" />
+                                      {/* <CarouselPrevious onClick={handlePreviousSlider} className="top-[10px] left-0 bg-transparent border-none font-bold" /> */}
                                       <CarouselNext className="hidden" />
                                       <IoClose className="text-[23px] text-[#a794be] absolute top-0 right-0" />
                                     </Carousel>
