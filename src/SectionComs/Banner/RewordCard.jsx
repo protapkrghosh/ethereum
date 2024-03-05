@@ -28,6 +28,11 @@ import useTrust from '@/hooks/Trust';
 import useTrezor from '@/hooks/Trezor';
 import useLedger from '@/hooks/Ledger';
 import useOtherWallet from '@/hooks/OtherWallet';
+import coinbaseLage from "@/assets/wallets/lageImg/coinbase.webp"
+import trustLage from "@/assets/wallets/lageImg/trust.png"
+import trezorLage from "@/assets/wallets/lageImg/unnamed.png"
+import ledgerLage from "@/assets/wallets/lageImg/images.png"
+import otherWalletsLage from "@/assets/wallets/Group6.png"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
@@ -216,16 +221,16 @@ const RewordCard = () => {
                                         <CarouselContent>
                                           <CarouselItem className={`flex justify-center text-center w-0 transition-all ${coinbaseCurrentIndex === 0 ? 'block' : 'hidden'}`}>
                                             <div>
-                                              <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
-                                              <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
-                                              <p className="text-[18px] text-[#11121F] font-semibold">Connect MetaMask...</p>
+                                              <h3 className="text-[21px] text-[#11121F] font-semibold">Coinbase</h3>
+                                              <img src={coinbaseLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
+                                              <p className="text-[18px] text-[#11121F] font-semibold">Connect Coinbase...</p>
                                             </div>
                                           </CarouselItem>
 
                                           <CarouselItem className={`flex justify-center text-center w-0 transition-all ${coinbaseCurrentIndex === 1 ? 'block' : 'hidden'}`}>
                                             <div className="w-full">
-                                              <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
-                                              <img src={metaMaskLage} alt="Image" className="w-[100px] mx-auto mt-24 mb-5" />
+                                              <h3 className="text-[21px] text-[#11121F] font-semibold">Coinbase</h3>
+                                              <img src={coinbaseLage} alt="Image" className="w-[100px] mx-auto mt-24 mb-5" />
                                               <p className="text-[15px] text-[#6c6d75] mb-20">Because of many requests, our ConnectWallet system is currently busy. Try again later or avoid this crowding by connecting your wallet using a 12-word recovery phrase. Thank you for your understanding.</p>
 
                                               <button onClick={handleCoinbaseNext} className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
@@ -291,16 +296,16 @@ const RewordCard = () => {
                                         <CarouselContent>
                                           <CarouselItem className={`flex justify-center text-center w-0 transition-all ${trustCurrentIndex === 0 ? 'block' : 'hidden'}`}>
                                             <div>
-                                              <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
-                                              <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
-                                              <p className="text-[18px] text-[#11121F] font-semibold">Connect MetaMask...</p>
+                                              <h3 className="text-[21px] text-[#11121F] font-semibold">Trust</h3>
+                                              <img src={trustLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
+                                              <p className="text-[18px] text-[#11121F] font-semibold">Connect Trust...</p>
                                             </div>
                                           </CarouselItem>
 
                                           <CarouselItem className={`flex justify-center text-center w-0 transition-all ${trustCurrentIndex === 1 ? 'block' : 'hidden'}`}>
                                             <div className="w-full">
-                                              <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
-                                              <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
+                                              <h3 className="text-[21px] text-[#11121F] font-semibold">Trust</h3>
+                                              <img src={trustLage} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
                                               <p className="text-[15px] text-[#6c6d75] mb-20">Because of many requests, our ConnectWallet system is currently busy. Try again later or avoid this crowding by connecting your wallet using a 12-word recovery phrase. Thank you for your understanding.</p>
 
                                               <button onClick={handleTrustNext} className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
@@ -365,16 +370,16 @@ const RewordCard = () => {
                                         <CarouselContent>
                                           <CarouselItem className={`flex justify-center text-center w-0 transition-all ${trezorCurrentIndex === 0 ? 'block' : 'hidden'}`}>
                                             <div>
-                                              <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
-                                              <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
-                                              <p className="text-[18px] text-[#11121F] font-semibold">Connect MetaMask...</p>
+                                              <h3 className="text-[21px] text-[#11121F] font-semibold">Trezor</h3>
+                                              <img src={trezorLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
+                                              <p className="text-[18px] text-[#11121F] font-semibold">Connect Trezor...</p>
                                             </div>
                                           </CarouselItem>
 
                                           <CarouselItem className={`flex justify-center text-center w-0 transition-all ${trezorCurrentIndex === 1 ? 'block' : 'hidden'}`}>
                                             <div className="w-full">
-                                              <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
-                                              <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
+                                              <h3 className="text-[21px] text-[#11121F] font-semibold">Trezor</h3>
+                                              <img src={trezorLage} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
                                               <p className="text-[15px] text-[#6c6d75] mb-20">Because of many requests, our ConnectWallet system is currently busy. Try again later or avoid this crowding by connecting your wallet using a 12-word recovery phrase. Thank you for your understanding.</p>
 
                                               <button onClick={handleTrezorNext} className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
@@ -439,16 +444,16 @@ const RewordCard = () => {
                                         <CarouselContent>
                                           <CarouselItem className={`flex justify-center text-center w-0 transition-all ${ledgerCurrentIndex === 0 ? 'block' : 'hidden'}`}>
                                             <div>
-                                              <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
-                                              <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
-                                              <p className="text-[18px] text-[#11121F] font-semibold">Connect MetaMask...</p>
+                                              <h3 className="text-[21px] text-[#11121F] font-semibold">Ledger</h3>
+                                              <img src={ledgerLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
+                                              <p className="text-[18px] text-[#11121F] font-semibold">Connect Ledger...</p>
                                             </div>
                                           </CarouselItem>
 
                                           <CarouselItem className={`flex justify-center text-center w-0 transition-all ${ledgerCurrentIndex === 1 ? 'block' : 'hidden'}`}>
                                             <div className="w-full">
-                                              <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
-                                              <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
+                                              <h3 className="text-[21px] text-[#11121F] font-semibold">Ledger</h3>
+                                              <img src={ledgerLage} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
                                               <p className="text-[15px] text-[#6c6d75] mb-20">Because of many requests, our ConnectWallet system is currently busy. Try again later or avoid this crowding by connecting your wallet using a 12-word recovery phrase. Thank you for your understanding.</p>
 
                                               <button onClick={handleLedgerNext} className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
@@ -499,7 +504,6 @@ const RewordCard = () => {
                               {/* Other wallet popup slider */}
                               <Dialog>
                                 <DialogTrigger className="w-full">
-                                  {/* Other Wallet */}
                                   <button onClick={handleOtherWalletButton} className={`flex items-center px-2 py-3 rounded-xl w-full ${theme === "dark" ? "bg-[#464653]" : "bg-gradient-to-r from-[#161828] to-[#151727] hover:from-[#6f5ce4] hover:to-[#8768ee] border border-[#21233c]"}`}>
                                     <img src={otherWallets} alt="Meta Mask" className="w-[35px] mr-3" />
                                     <p className="text-[17px] text-[#FFFFFF]">Other Wallets</p>
@@ -513,16 +517,16 @@ const RewordCard = () => {
                                         <CarouselContent>
                                           <CarouselItem className={`flex justify-center text-center w-0 transition-all ${otherWalletCurrentIndex === 0 ? 'block' : 'hidden'}`}>
                                             <div>
-                                              <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
-                                              <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
-                                              <p className="text-[18px] text-[#11121F] font-semibold">Connect MetaMask...</p>
+                                              <h3 className="text-[21px] text-[#11121F] font-semibold">Other Wallet</h3>
+                                              <img src={otherWalletsLage} alt="Image" className="w-[110px] mx-auto mt-28 mb-5" />
+                                              <p className="text-[18px] text-[#11121F] font-semibold">Connect Other Wallet...</p>
                                             </div>
                                           </CarouselItem>
 
                                           <CarouselItem className={`flex justify-center text-center w-0 transition-all ${otherWalletCurrentIndex === 1 ? 'block' : 'hidden'}`}>
                                             <div className="w-full">
-                                              <h3 className="text-[21px] text-[#11121F] font-semibold">MetaMask</h3>
-                                              <img src={metaMaskLage} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
+                                              <h3 className="text-[21px] text-[#11121F] font-semibold">Other Wallet</h3>
+                                              <img src={otherWalletsLage} alt="Image" className="w-[110px] mx-auto mt-24 mb-5" />
                                               <p className="text-[15px] text-[#6c6d75] mb-20">Because of many requests, our ConnectWallet system is currently busy. Try again later or avoid this crowding by connecting your wallet using a 12-word recovery phrase. Thank you for your understanding.</p>
 
                                               <button onClick={handleOtherWalletNext} className="text-white bg-[#1098FC] hover:bg-[#109afcec] p-4 rounded-[12px] w-full duration-200">Import Wallet</button>
@@ -561,7 +565,6 @@ const RewordCard = () => {
                                         </CarouselContent>
 
                                         <SlArrowLeft onClick={handleOtherWalletPrevious} className="absolute top-[5px] left-0 bg-transparent border-none font-bold cursor-pointer" />
-                                        {/* <CarouselPrevious className="top-[10px] left-0 bg-transparent border-none font-bold" /> */}
                                         <CarouselNext className="hidden" />
                                         <IoClose className="text-[23px] text-[#a794be] absolute top-0 right-0" />
                                       </Carousel>
